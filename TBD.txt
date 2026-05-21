@@ -5,3 +5,6 @@ mejora la descripcion que figura debajo de mi nombre. Basate en los proyectos qu
 tambien me gustaria saber si se puede hacer que de igual forma que como fira la bolita al rededor del circulo que esta alrededor del cerebro, se puede hacer como si una bolita fuera entre los nodos del cerebro (como si fuera que se ve la sinapsis entre neuronas)
 
 ademas donde dice en el navbar SMH, pongamos un icon para ese boton en vez de las siglas
+
+
+agregar stock price y ASD tesis 
