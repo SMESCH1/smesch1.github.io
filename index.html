@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastián Mesch Henriques — Data / ML Engineer</title>
+  <meta name="description" content="Portfolio of Sebastián Mesch Henriques — Data Science, Machine Learning, and Data Engineering projects." />
+  <meta property="og:title" content="Sebastián Mesch Henriques — Data / ML Engineer" />
+  <meta property="og:description" content="Portfolio of Sebastián Mesch Henriques — Data Science, Machine Learning, and Data Engineering projects." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { 950: '#08090b', 900: '#0d0f12', 800: '#13161b', 700: '#1d2026', 600: '#272a31' },
+            mist: { 100: '#f1f3f5', 200: '#dde1e5', 300: '#a0a7ad', 400: '#7a818a', 500: '#5b6168' },
+            accent: { DEFAULT: '#6bd5b0', soft: '#3a9c7a' }
+          },
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['ui-monospace', 'SF Mono', 'Menlo', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-border { background: linear-gradient(135deg, #6bd5b0 0%, #3a9c7a 50%, #1d2026 100%); }
+    .card { transition: transform 0.2s ease, border-color 0.2s ease; }
+    .card:hover { transform: translateY(-2px); border-color: rgba(107,213,176,0.4); }
+    .grain::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .lang-hidden { display: none; }
+    .nav-link { color: #a0a7ad; transition: color 0.15s; }
+    .nav-link:hover { color: #6bd5b0; }
+    .glow { box-shadow: 0 0 40px -10px rgba(107,213,176,0.3); }
+  </style>
+</head>
+<body class="bg-ink-950 text-mist-200 font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ink-950/70 border-b border-ink-700/50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="font-mono text-accent text-sm tracking-tight">~/smesch1</a>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#projects" class="nav-link hidden sm:block" data-i18n="nav_projects">Projects</a>
+        <a href="#about" class="nav-link hidden sm:block" data-i18n="nav_about">About</a>
+        <a href="#contact" class="nav-link hidden sm:block" data-i18n="nav_contact">Contact</a>
+        <button id="lang-toggle" class="font-mono text-xs px-2 py-1 rounded border border-ink-600 text-mist-300 hover:text-accent hover:border-accent transition" aria-label="Toggle language">EN / ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" class="relative min-h-screen flex items-center grain overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink-950 via-ink-900 to-ink-950"></div>
+    <div class="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
+    <div class="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-accent-soft/5 blur-3xl"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 py-32 grid md:grid-cols-[1fr_auto] gap-12 items-center w-full">
+      <div>
+        <p class="font-mono text-accent text-sm mb-4">$ whoami</p>
+        <h1 class="text-4xl md:text-6xl font-bold text-mist-100 leading-tight tracking-tight">
+          Sebastián Mesch<br/>Henriques
+        </h1>
+        <p class="mt-4 text-xl md:text-2xl text-mist-300">
+          <span data-i18n="hero_title">Data / ML Engineer in the making</span>
+        </p>
+        <p class="mt-6 text-mist-400 max-w-xl leading-relaxed">
+          <span data-i18n="hero_desc">I build things that learn from data — from NLP for financial markets to medallion data pipelines. Currently in the Master's in AI program at ITBA (Argentina).</span>
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="px-5 py-2.5 bg-accent text-ink-950 font-medium rounded-lg hover:bg-accent-soft transition glow">
+            <span data-i18n="hero_cta_projects">See projects →</span>
+          </a>
+          <a href="#contact" class="px-5 py-2.5 border border-ink-600 text-mist-200 font-medium rounded-lg hover:border-accent hover:text-accent transition">
+            <span data-i18n="hero_cta_contact">Contact</span>
+          </a>
+          <a href="cv.pdf" download class="px-5 py-2.5 border border-ink-600 text-mist-200 font-medium rounded-lg hover:border-accent hover:text-accent transition inline-flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+            <span data-i18n="hero_cta_cv">Download CV</span>
+          </a>
+        </div>
+        <div class="mt-8 flex items-center gap-4 text-mist-400 text-sm">
+          <a href="https://github.com/SMESCH1" class="hover:text-accent transition inline-flex items-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            github.com/SMESCH1
+          </a>
+          <span class="text-ink-600">·</span>
+          <a href="https://www.linkedin.com/in/sebastian-mesch-henriques/" class="hover:text-accent transition inline-flex items-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <!-- AVATAR -->
+      <div class="hidden md:block">
+        <div class="relative w-56 h-56 lg:w-64 lg:h-64">
+          <div class="absolute inset-0 rounded-full gradient-border blur-md opacity-50"></div>
+          <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-ink-700 bg-ink-800">
+            <!-- Replace src with your photo. Place a file `avatar.jpg` next to this index.html -->
+            <img id="avatar" src="avatar.jpg" alt="Sebastián Mesch Henriques"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="w-full h-full object-cover" />
+            <div class="w-full h-full flex items-center justify-center text-7xl font-bold text-accent" style="display:none;">SM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#projects" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-mist-400 animate-bounce" aria-label="Scroll">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m0 0l-6-6m6 6l6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 px-6 border-t border-ink-700/50">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-baseline justify-between mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-mist-100">
+          <span class="text-accent font-mono text-base mr-3">01.</span><span data-i18n="projects_title">Featured projects</span>
+        </h2>
+        <a href="https://github.com/SMESCH1?tab=repositories" class="text-sm text-mist-400 hover:text-accent transition">
+          <span data-i18n="projects_all">All repos →</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+
+        <!-- Project 0 - Autism (mental health hero) -->
+        <article class="card group border border-ink-700 rounded-xl p-6 bg-ink-900/50 hover:bg-ink-900">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-xs font-mono text-accent">ML · MENTAL HEALTH · NEUROSCIENCE</span>
+            <a href="https://github.com/SMESCH1/autism-classification-brainhack" class="text-mist-400 hover:text-accent transition" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-xl font-semibold text-mist-100 mb-2 group-hover:text-accent transition">Autism Classification (BrainHack)</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-4">
+            <span data-i18n="p0_desc">Clustering (KMeans) + supervised classification (Logistic Regression) on neuroimaging-derived features for autism spectrum classification. Built during BrainHack workshop.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">scikit-learn</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">pandas</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">matplotlib</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">neuroimaging</span>
+          </div>
+        </article>
+
+        <!-- Project 1 - Merval -->
+        <article class="card group border border-ink-700 rounded-xl p-6 bg-ink-900/50 hover:bg-ink-900">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-xs font-mono text-accent">ML · NLP · TIME SERIES</span>
+            <a href="https://github.com/SMESCH1/merval-sentiment-analysis-prediction" class="text-mist-400 hover:text-accent transition" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-xl font-semibold text-mist-100 mb-2 group-hover:text-accent transition">MERVAL Sentiment Analysis &amp; Prediction</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-4">
+            <span data-i18n="p1_desc">Bidirectional LSTM that predicts the next-day direction of the Argentine MERVAL index using sentiment signals scraped from Reddit. HP-tuned with Optuna, validated with walk-forward CV.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">PyTorch</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">pysentimiento</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Optuna</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">yfinance</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card group border border-ink-700 rounded-xl p-6 bg-ink-900/50 hover:bg-ink-900">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-xs font-mono text-accent">DATA ENGINEERING · DBT · AIRFLOW</span>
+            <a href="https://github.com/SMESCH1/medallion-pipeline-airflow-dbt" class="text-mist-400 hover:text-accent transition" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-xl font-semibold text-mist-100 mb-2 group-hover:text-accent transition">Medallion Pipeline (Airflow + dbt + DuckDB)</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-4">
+            <span data-i18n="p2_desc">End-to-end Bronze→Silver→Gold pipeline with 29 automated data quality tests. Pandas for ingestion, dbt over DuckDB for modeling, Airflow for orchestration.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Airflow</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">dbt</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">DuckDB</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Pandas</span>
+          </div>
+        </article>
+
+        <!-- Project 3 - InforMessi -->
+        <article class="card group border border-ink-700 rounded-xl p-6 bg-ink-900/50 hover:bg-ink-900">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-xs font-mono text-accent">LLM · RAG · AUTOMATION</span>
+            <a href="https://github.com/SMESCH1/InforMessi" class="text-mist-400 hover:text-accent transition" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-xl font-semibold text-mist-100 mb-2 group-hover:text-accent transition">InforMessi</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-4">
+            <span data-i18n="p3_desc">Automated editorial pipeline that generates and publishes daily Telegram posts about the Argentine national team. LLM-powered (Ollama / Groq) with a custom anti-repetition RAG system. Runs daily via GitHub Actions.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Python</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Ollama</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Groq</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">RAG</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Telegram API</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">GitHub Actions</span>
+          </div>
+        </article>
+
+        <!-- Project 4 - SocratIA -->
+        <article class="card group border border-ink-700 rounded-xl p-6 bg-ink-900/50 hover:bg-ink-900">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-xs font-mono text-accent">FULL-STACK · NEXT.JS · SUPABASE</span>
+            <a href="https://github.com/SMESCH1/SOCRATIA" class="text-mist-400 hover:text-accent transition" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-xl font-semibold text-mist-100 mb-2 group-hover:text-accent transition">SocratIA</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-4">
+            <span data-i18n="p4b_desc">Gamified philosophy learning app à la Duolingo. Themed islands, missions with interactive theory and quizzes, XP and daily streaks. Built with Next.js 16 + Supabase + Tailwind v4.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Next.js 16</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">React 19</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Supabase</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Tailwind v4</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">RLS</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Framer Motion</span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card group border border-ink-700 rounded-xl p-6 bg-ink-900/50 hover:bg-ink-900">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-xs font-mono text-accent">BACKEND · API · CI/CD</span>
+            <div class="flex gap-2">
+              <a href="https://testing-examen-soft-eng.onrender.com/docs" class="text-mist-400 hover:text-accent transition" aria-label="Live demo" title="Live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+              <a href="https://github.com/SMESCH1/fastapi-payments-api" class="text-mist-400 hover:text-accent transition" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-mist-100 mb-2 group-hover:text-accent transition">FastAPI Payments API</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-4">
+            <span data-i18n="p4_desc">REST API for online payments with explicit state machine, unit + integration tests, GitHub Actions CI, and auto-deploy to Render.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">FastAPI</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">unittest</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">GitHub Actions</span>
+            <span class="px-2 py-0.5 rounded-full bg-ink-700 text-mist-300">Render</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6 border-t border-ink-700/50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-mist-100 mb-12">
+        <span class="text-accent font-mono text-base mr-3">02.</span><span data-i18n="about_title">About</span>
+      </h2>
+
+      <div class="grid md:grid-cols-[2fr_1fr] gap-12">
+        <div class="space-y-4 text-mist-300 leading-relaxed">
+          <p data-i18n="about_p1">
+            I'm a senior student in the Master's in Artificial Intelligence program at <strong class="text-mist-100">ITBA</strong> (Buenos Aires, Argentina), focused on Data Science, Machine Learning, and Data Engineering.
+          </p>
+          <p data-i18n="about_p2">
+            I'm drawn to the intersection of unstructured data (text, signals) and concrete problems in finance, neuroscience, and production pipelines. Recently I've been deep in <strong class="text-mist-100">PyTorch</strong>, <strong class="text-mist-100">dbt</strong>, and <strong class="text-mist-100">Airflow</strong>, but I'm always learning more.
+          </p>
+          <p data-i18n="about_p3">
+            All my major projects ship with PRs and co-authors — I care about working well in a team and writing documentation that helps future-me (and future-you).
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-mono text-accent text-sm mb-4" data-i18n="about_stack">~/stack</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="text-xs text-mist-500 mb-1.5" data-i18n="stack_lang">Languages</div>
+              <div class="flex flex-wrap gap-1.5 text-xs">
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Python</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">SQL</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Bash</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500 mb-1.5" data-i18n="stack_ml">ML / DL</div>
+              <div class="flex flex-wrap gap-1.5 text-xs">
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">PyTorch</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">scikit-learn</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Optuna</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">transformers</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">pysentimiento</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500 mb-1.5" data-i18n="stack_data">Data Engineering</div>
+              <div class="flex flex-wrap gap-1.5 text-xs">
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Airflow</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">dbt</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">DuckDB</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Pandas</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Polars</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500 mb-1.5" data-i18n="stack_backend">Backend / Tooling</div>
+              <div class="flex flex-wrap gap-1.5 text-xs">
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">FastAPI</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">unittest</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Git</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">GitHub Actions</span>
+                <span class="px-2 py-0.5 rounded bg-ink-800 border border-ink-700 text-mist-200">Render</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 px-6 border-t border-ink-700/50">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-mist-100 mb-4">
+        <span class="text-accent font-mono text-base mr-3">03.</span><span data-i18n="contact_title">Get in touch</span>
+      </h2>
+      <p class="text-mist-400 mb-10" data-i18n="contact_subtitle">
+        Open to remote / relocation. Roles in Data Science, ML Engineering, and Data Engineering.
+      </p>
+
+      <div class="grid md:grid-cols-[1fr_1fr] gap-10">
+        <div class="space-y-4">
+          <a href="mailto:sebastianmeschhenriques@gmail.com" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-lg border border-ink-700 bg-ink-800 flex items-center justify-center text-accent group-hover:border-accent transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6 9-6M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8M3 8l2-2h14l2 2"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500" data-i18n="contact_email">Email</div>
+              <div class="text-mist-100 text-sm group-hover:text-accent transition">sebastianmeschhenriques@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/sebastian-mesch-henriques/" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-lg border border-ink-700 bg-ink-800 flex items-center justify-center text-accent group-hover:border-accent transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500">LinkedIn</div>
+              <div class="text-mist-100 text-sm group-hover:text-accent transition">/in/sebastian-mesch-henriques</div>
+            </div>
+          </a>
+          <a href="https://github.com/SMESCH1" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-lg border border-ink-700 bg-ink-800 flex items-center justify-center text-accent group-hover:border-accent transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38s1.95.13 2.86.38c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500">GitHub</div>
+              <div class="text-mist-100 text-sm group-hover:text-accent transition">@SMESCH1</div>
+            </div>
+          </a>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg border border-ink-700 bg-ink-800 flex items-center justify-center text-accent">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="text-xs text-mist-500" data-i18n="contact_location">Location</div>
+              <div class="text-mist-100 text-sm" data-i18n="contact_location_value">Argentina · open to remote &amp; relocation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formspree form. Replace YOUR_FORM_ID with the one you get from formspree.io -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-3">
+          <div>
+            <label class="block text-xs text-mist-500 mb-1" data-i18n="form_name">Name</label>
+            <input type="text" name="name" required class="w-full px-3 py-2 bg-ink-800 border border-ink-700 rounded-lg text-mist-100 text-sm focus:outline-none focus:border-accent transition" />
+          </div>
+          <div>
+            <label class="block text-xs text-mist-500 mb-1" data-i18n="form_email">Email</label>
+            <input type="email" name="email" required class="w-full px-3 py-2 bg-ink-800 border border-ink-700 rounded-lg text-mist-100 text-sm focus:outline-none focus:border-accent transition" />
+          </div>
+          <div>
+            <label class="block text-xs text-mist-500 mb-1" data-i18n="form_message">Message</label>
+            <textarea name="message" rows="4" required class="w-full px-3 py-2 bg-ink-800 border border-ink-700 rounded-lg text-mist-100 text-sm focus:outline-none focus:border-accent transition resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full px-5 py-2.5 bg-accent text-ink-950 font-medium rounded-lg hover:bg-accent-soft transition">
+            <span data-i18n="form_send">Send message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 px-6 border-t border-ink-700/50">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-mist-500">
+      <p data-i18n="footer_text">Built with HTML, Tailwind, and a lot of coffee.</p>
+      <p class="font-mono">© 2026 Sebastián Mesch Henriques</p>
+    </div>
+  </footer>
+
+  <!-- LANGUAGE TOGGLE -->
+  <script>
+    const translations = {
+      en: {
+        nav_projects: "Projects", nav_about: "About", nav_contact: "Contact",
+        hero_title: "Data / ML Engineer in the making",
+        hero_desc: "I build things that learn from data — from NLP for financial markets to medallion data pipelines. Currently in the Master's in AI program at ITBA (Argentina).",
+        hero_cta_projects: "See projects →", hero_cta_contact: "Contact", hero_cta_cv: "Download CV",
+        projects_title: "Featured projects", projects_all: "All repos →",
+        p0_desc: "Clustering (KMeans) + supervised classification (Logistic Regression) on neuroimaging-derived features for autism spectrum classification. Built during BrainHack workshop.",
+        p1_desc: "Bidirectional LSTM that predicts the next-day direction of the Argentine MERVAL index using sentiment signals scraped from Reddit. HP-tuned with Optuna, validated with walk-forward CV.",
+        p2_desc: "End-to-end Bronze→Silver→Gold pipeline with 29 automated data quality tests. Pandas for ingestion, dbt over DuckDB for modeling, Airflow for orchestration.",
+        p3_desc: "Automated editorial pipeline that generates and publishes daily Telegram posts about the Argentine national team. LLM-powered (Ollama / Groq) with a custom anti-repetition RAG system. Runs daily via GitHub Actions.",
+        p4b_desc: "Gamified philosophy learning app à la Duolingo. Themed islands, missions with interactive theory and quizzes, XP and daily streaks. Built with Next.js 16 + Supabase + Tailwind v4.",
+        p4_desc: "REST API for online payments with explicit state machine, unit + integration tests, GitHub Actions CI, and auto-deploy to Render.",
+        about_title: "About",
+        about_p1: "I'm a senior student in the Master's in Artificial Intelligence program at <strong class='text-mist-100'>ITBA</strong> (Buenos Aires, Argentina), focused on Data Science, Machine Learning, and Data Engineering.",
+        about_p2: "I'm drawn to the intersection of unstructured data (text, signals) and concrete problems in finance, neuroscience, and production pipelines. Recently I've been deep in <strong class='text-mist-100'>PyTorch</strong>, <strong class='text-mist-100'>dbt</strong>, and <strong class='text-mist-100'>Airflow</strong>, but I'm always learning more.",
+        about_p3: "All my major projects ship with PRs and co-authors — I care about working well in a team and writing documentation that helps future-me (and future-you).",
+        about_stack: "~/stack",
+        stack_lang: "Languages", stack_ml: "ML / DL", stack_data: "Data Engineering", stack_backend: "Backend / Tooling",
+        contact_title: "Get in touch",
+        contact_subtitle: "Open to remote / relocation. Roles in Data Science, ML Engineering, and Data Engineering.",
+        contact_email: "Email", contact_location: "Location", contact_location_value: "Argentina · open to remote & relocation",
+        form_name: "Name", form_email: "Email", form_message: "Message", form_send: "Send message",
+        footer_text: "Built with HTML, Tailwind, and a lot of coffee."
+      },
+      es: {
+        nav_projects: "Proyectos", nav_about: "Sobre mí", nav_contact: "Contacto",
+        hero_title: "Data / ML Engineer en formación",
+        hero_desc: "Construyo cosas que aprenden de los datos — desde NLP para mercados financieros hasta pipelines de datos medallion. Cursando la Maestría en IA en el ITBA (Argentina).",
+        hero_cta_projects: "Ver proyectos →", hero_cta_contact: "Contacto", hero_cta_cv: "Descargar CV",
+        projects_title: "Proyectos destacados", projects_all: "Todos los repos →",
+        p0_desc: "Clustering (KMeans) + clasificación supervisada (Regresión Logística) sobre features de neuroimagen para clasificación del espectro autista. Desarrollado en un workshop BrainHack.",
+        p1_desc: "LSTM bidireccional que predice la dirección diaria del MERVAL argentino usando señales de sentimiento scrapeadas de Reddit. Tuneado con Optuna, validado con walk-forward CV.",
+        p2_desc: "Pipeline end-to-end Bronze→Silver→Gold con 29 tests automáticos de data quality. Pandas para ingestión, dbt sobre DuckDB para modelado, Airflow para orquestación.",
+        p3_desc: "Pipeline editorial automatizado que genera y publica posts diarios en Telegram sobre la Selección Argentina. LLM-powered (Ollama / Groq) con un sistema RAG anti-repetición propio. Corre diariamente vía GitHub Actions.",
+        p4b_desc: "App gamificada para aprender filosofía estilo Duolingo. Islas temáticas, misiones con teoría interactiva y quizzes, XP y rachas diarias. Construida con Next.js 16 + Supabase + Tailwind v4.",
+        p4_desc: "API REST de pagos en línea con state machine explícita, tests unitarios + integración, CI con GitHub Actions y auto-deploy a Render.",
+        about_title: "Sobre mí",
+        about_p1: "Soy estudiante avanzado de la Maestría en Inteligencia Artificial en el <strong class='text-mist-100'>ITBA</strong> (Buenos Aires, Argentina), con foco en Data Science, Machine Learning y Data Engineering.",
+        about_p2: "Me interesa la intersección entre datos no estructurados (texto, señales) y problemas concretos en finanzas, neurociencia, y pipelines productivos. Últimamente vengo metido en <strong class='text-mist-100'>PyTorch</strong>, <strong class='text-mist-100'>dbt</strong> y <strong class='text-mist-100'>Airflow</strong>, pero siempre aprendiendo más.",
+        about_p3: "Todos mis proyectos grandes los hago con PRs y co-autores — me importa trabajar bien en equipo y dejar documentación que ayude al yo-del-futuro (y al vos-del-futuro).",
+        about_stack: "~/stack",
+        stack_lang: "Lenguajes", stack_ml: "ML / DL", stack_data: "Data Engineering", stack_backend: "Backend / Tooling",
+        contact_title: "Contacto",
+        contact_subtitle: "Abierto a remoto / relocation. Posiciones en Data Science, ML Engineering y Data Engineering.",
+        contact_email: "Email", contact_location: "Ubicación", contact_location_value: "Argentina · abierto a remoto y relocation",
+        form_name: "Nombre", form_email: "Email", form_message: "Mensaje", form_send: "Enviar mensaje",
+        footer_text: "Hecho con HTML, Tailwind y mucho café."
+      }
+    };
+
+    let currentLang = (navigator.language || 'en').startsWith('es') ? 'es' : 'en';
+    const savedLang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang'));
+    if (savedLang) currentLang = savedLang;
+
+    function applyLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      const btn = document.getElementById('lang-toggle');
+      btn.textContent = lang === 'en' ? 'EN / ES' : 'ES / EN';
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      applyLang(currentLang === 'en' ? 'es' : 'en');
+    });
+
+    applyLang(currentLang);
+  </script>
+</body>
+</html>
