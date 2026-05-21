@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sebastián Mesch Henriques — AI Engineer</title>
-  <meta name="description" content="AI Engineer with a neuroscience background. Building at the intersection of machine learning, mental health, and production data systems." />
-  <meta property="og:title" content="Sebastián Mesch Henriques — AI Engineer" />
-  <meta property="og:description" content="AI Engineer with a neuroscience background. Building at the intersection of machine learning, mental health, and production data systems." />
+  <title>Sebastián Mesch Henriques | Data Scientist</title>
+  <meta name="description" content="Data Scientist with a neuroscience background. Building at the intersection of AI, mental health, and production data systems." />
+  <meta property="og:title" content="Sebastián Mesch Henriques | Data Scientist" />
+  <meta property="og:description" content="Data Scientist with a neuroscience background. Building at the intersection of AI, mental health, and production data systems." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230B1A30' stroke='%23D6A232' stroke-width='2'/%3E%3Cpath d='M20 32c0-7 5-12 12-12s12 5 12 12-5 12-12 12-12-5-12-12Z' fill='none' stroke='%23D6A232' stroke-width='2'/%3E%3Ccircle cx='26' cy='30' r='2' fill='%23F4F4F2'/%3E%3Ccircle cx='32' cy='26' r='2' fill='%23F4F4F2'/%3E%3Ccircle cx='38' cy='30' r='2' fill='%23F4F4F2'/%3E%3Ccircle cx='32' cy='36' r='2' fill='%23F4F4F2'/%3E%3Cline x1='26' y1='30' x2='32' y2='26' stroke='%23D6A232'/%3E%3Cline x1='32' y1='26' x2='38' y2='30' stroke='%23D6A232'/%3E%3Cline x1='26' y1='30' x2='32' y2='36' stroke='%23D6A232'/%3E%3Cline x1='38' y1='30' x2='32' y2='36' stroke='%23D6A232'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -18,9 +18,9 @@
       theme: {
         extend: {
           colors: {
-            ink:   { 950:'#07080a', 900:'#0c0e11', 800:'#121519', 700:'#1b1e24', 600:'#252830' },
-            mist:  { 100:'#eef0f3', 200:'#d8dce2', 300:'#9ba3ac', 400:'#737c86', 500:'#535c66' },
-            accent:{ DEFAULT:'#5fcfa8', soft:'#3a9e7e', dim:'#2a7059' }
+            ink:   { 950:'#050A14', 900:'#0B1A30', 800:'#112A4D', 700:'#1A355C', 600:'#2B2D31' },
+            mist:  { 100:'#F4F4F2', 200:'#E7E7E3', 300:'#CFD3DA', 400:'#9AA4B2', 500:'#7A8391' },
+            accent:{ DEFAULT:'#D6A232', soft:'#B9851D', dim:'#876114' }
           },
           fontFamily: {
             serif: ['"Instrument Serif"', 'Georgia', 'serif'],
@@ -48,7 +48,7 @@
     }
   </script>
   <style>
-    :root { --accent: #5fcfa8; }
+    :root { --accent: #D6A232; }
 
     /* Noise texture overlay */
     body::before {
@@ -67,11 +67,11 @@
     }
     .card::after {
       content:''; position:absolute; inset:0; opacity:0;
-      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(95,207,168,.06) 0%, transparent 60%);
+      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(214,162,50,.08) 0%, transparent 60%);
       transition: opacity 0.3s;
       pointer-events:none;
     }
-    .card:hover { transform:translateY(-3px); border-color:rgba(95,207,168,.35); }
+    .card:hover { transform:translateY(-3px); border-color:rgba(214,162,50,.4); }
     .card:hover::after { opacity:1; }
 
     /* Nav link */
@@ -79,12 +79,12 @@
     .nav-link:hover { color:var(--accent); }
 
     /* Glow */
-    .glow { box-shadow: 0 0 32px -8px rgba(95,207,168,.4); }
-    .glow:hover { box-shadow: 0 0 48px -8px rgba(95,207,168,.55); }
+    .glow { box-shadow: 0 0 32px -8px rgba(214,162,50,.35); }
+    .glow:hover { box-shadow: 0 0 48px -8px rgba(214,162,50,.5); }
 
     /* Gradient text */
     .grad-text {
-      background: linear-gradient(135deg, #5fcfa8 0%, #a8e8d0 50%, #5fcfa8 100%);
+      background: linear-gradient(135deg, #D6A232 0%, #F4F4F2 50%, #D6A232 100%);
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
     }
 
@@ -98,11 +98,11 @@
     .timeline-item::before {
       content:''; position:absolute; left:-1.25rem; top:.35rem;
       width:.5rem; height:.5rem; border-radius:50%;
-      background: var(--accent); box-shadow: 0 0 8px rgba(95,207,168,.5);
+      background: var(--accent); box-shadow: 0 0 8px rgba(214,162,50,.5);
     }
     .timeline-line {
       position:absolute; left:-1.01rem; top:.85rem; bottom:0;
-      width:1px; background: linear-gradient(to bottom, rgba(95,207,168,.3), transparent);
+      width:1px; background: linear-gradient(to bottom, rgba(214,162,50,.35), transparent);
     }
 
     /* Scroll reveal */
@@ -145,15 +145,15 @@
     <div class="absolute top-1/3 -left-48 w-[600px] h-[600px] rounded-full bg-accent/4 blur-[120px]"></div>
     <div class="absolute -bottom-24 -right-48 w-[500px] h-[500px] rounded-full bg-accent-soft/4 blur-[100px]"></div>
     <!-- Subtle grid -->
-    <div class="absolute inset-0 opacity-[0.025]" style="background-image:linear-gradient(rgba(95,207,168,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(95,207,168,.5) 1px,transparent 1px);background-size:80px 80px;"></div>
+    <div class="absolute inset-0 opacity-[0.025]" style="background-image:linear-gradient(rgba(214,162,50,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(214,162,50,.35) 1px,transparent 1px);background-size:80px 80px;"></div>
 
     <div class="relative max-w-5xl mx-auto px-6 py-32 grid md:grid-cols-[1fr_auto] gap-16 items-center w-full">
       <div>
         <!-- Role badges -->
         <div class="animate-fade-up flex flex-wrap gap-2 mb-7">
-          <span class="tag px-3 py-1.5 rounded-full border border-accent/30 bg-accent/8 text-accent">AI Engineer</span>
+          <span class="tag px-3 py-1.5 rounded-full border border-accent/30 bg-accent/8 text-accent">Data Scientist</span>
           <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_neuro">Neuroscience background</span>
-          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_mental">Mental health · AI</span>
+          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_mental">Mental health + AI</span>
         </div>
 
         <!-- Name -->
@@ -163,7 +163,7 @@
 
         <!-- Tagline -->
         <p class="animate-fade-up-3 mt-5 text-lg text-mist-300 font-light max-w-lg leading-relaxed">
-          <span data-i18n="hero_desc">I build AI systems that understand humans — combining a neuroscience background with machine learning, LLMs, and production data pipelines. Studying the MSc in AI at UdeSA. Based in Buenos Aires.</span>
+          <span data-i18n="hero_desc">I build AI systems that understand people, combining neuroscience, machine learning, LLMs, and production data pipelines. MSc in AI at UdeSA. Based in Buenos Aires.</span>
         </p>
 
         <!-- CTAs -->
@@ -174,9 +174,9 @@
           <a href="#contact" class="px-5 py-2.5 border border-ink-600 text-mist-200 font-medium rounded-lg hover:border-accent/60 hover:text-accent transition text-sm">
             <span data-i18n="hero_cta_contact">Contact</span>
           </a>
-          <a href="cv.pdf" download class="px-5 py-2.5 border border-ink-600 text-mist-200 font-medium rounded-lg hover:border-accent/60 hover:text-accent transition inline-flex items-center gap-2 text-sm">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-            <span data-i18n="hero_cta_cv">Download CV</span>
+          <a href="#research" class="px-5 py-2.5 border border-ink-600 text-mist-200 font-medium rounded-lg hover:border-accent/60 hover:text-accent transition inline-flex items-center gap-2 text-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            <span data-i18n="hero_cta_cv">View research</span>
           </a>
         </div>
 
@@ -192,63 +192,53 @@
             LinkedIn
           </a>
           <span class="text-ink-600">·</span>
-          <span class="text-mist-500">Buenos Aires · <span data-i18n="hero_location">open to remote</span></span>
+          <span class="text-mist-500">Buenos Aires, <span data-i18n="hero_location">open to remote</span></span>
         </div>
       </div>
 
-      <!-- AVATAR / Neural network visual -->
+      <!-- Avatar style brain network visual -->
       <div class="hidden md:flex items-center justify-center">
         <div class="relative w-60 h-60 lg:w-72 lg:h-72 animate-float">
-          <!-- Glow ring -->
-          <div class="absolute inset-0 rounded-full" style="background:radial-gradient(circle, rgba(95,207,168,.15) 0%, transparent 70%);"></div>
-          <!-- Photo (with fallback) -->
-          <div class="relative w-full h-full rounded-full overflow-hidden border border-accent/20 bg-ink-800">
-            <img id="avatar" src="avatar.jpg" alt="Sebastián Mesch Henriques"
-                 onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';"
-                 class="w-full h-full object-cover" />
-            <!-- Fallback: animated neural network SVG -->
-            <div id="avatar-fallback" class="w-full h-full items-center justify-center" style="display:none;">
-              <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#1b1e24"/>
-                    <stop offset="100%" stop-color="#07080a"/>
-                  </radialGradient>
-                </defs>
-                <rect width="200" height="200" fill="url(#bgGrad)"/>
-                <!-- Edges -->
-                <g stroke="rgba(95,207,168,.25)" stroke-width="1" fill="none">
-                  <line class="edge-draw" x1="100" y1="40"  x2="60"  y2="90"  style="animation-delay:.1s"/>
-                  <line class="edge-draw" x1="100" y1="40"  x2="140" y2="90"  style="animation-delay:.2s"/>
-                  <line class="edge-draw" x1="60"  y1="90"  x2="40"  y2="145" style="animation-delay:.4s"/>
-                  <line class="edge-draw" x1="60"  y1="90"  x2="100" y2="145" style="animation-delay:.5s"/>
-                  <line class="edge-draw" x1="140" y1="90"  x2="100" y2="145" style="animation-delay:.5s"/>
-                  <line class="edge-draw" x1="140" y1="90"  x2="160" y2="145" style="animation-delay:.6s"/>
-                  <line class="edge-draw" x1="100" y1="40"  x2="100" y2="90"  style="animation-delay:.3s"/>
-                  <line class="edge-draw" x1="60"  y1="90"  x2="100" y2="90"  style="animation-delay:.35s"/>
-                  <line class="edge-draw" x1="100" y1="90"  x2="140" y2="90"  style="animation-delay:.35s"/>
-                  <line class="edge-draw" x1="100" y1="90"  x2="100" y2="145" style="animation-delay:.55s"/>
-                </g>
-                <!-- Nodes -->
-                <g>
-                  <circle class="node-pulse" cx="100" cy="40"  r="6"  fill="rgba(95,207,168,.9)"  style="animation-delay:0s"/>
-                  <circle class="node-pulse" cx="60"  cy="90"  r="5"  fill="rgba(95,207,168,.75)" style="animation-delay:.3s"/>
-                  <circle class="node-pulse" cx="140" cy="90"  r="5"  fill="rgba(95,207,168,.75)" style="animation-delay:.5s"/>
-                  <circle class="node-pulse" cx="100" cy="90"  r="4"  fill="rgba(95,207,168,.6)"  style="animation-delay:.4s"/>
-                  <circle class="node-pulse" cx="40"  cy="145" r="4.5" fill="rgba(95,207,168,.7)" style="animation-delay:.6s"/>
-                  <circle class="node-pulse" cx="100" cy="145" r="5.5" fill="rgba(95,207,168,.85)" style="animation-delay:.7s"/>
-                  <circle class="node-pulse" cx="160" cy="145" r="4"  fill="rgba(95,207,168,.6)"  style="animation-delay:.8s"/>
-                  <!-- Outer halo for top node -->
-                  <circle cx="100" cy="40" r="11" fill="none" stroke="rgba(95,207,168,.2)" stroke-width="1" class="node-pulse" style="animation-delay:.1s"/>
-                </g>
-                <!-- Label -->
-                <text x="100" y="178" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(95,207,168,.5)" letter-spacing="2">NEURAL</text>
-              </svg>
-            </div>
+          <div class="absolute inset-0 rounded-full" style="background:radial-gradient(circle, rgba(214,162,50,.16) 0%, transparent 70%);"></div>
+          <div class="relative w-full h-full rounded-full overflow-hidden border border-accent/25 bg-ink-800">
+            <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#112A4D"/>
+                  <stop offset="100%" stop-color="#0B1A30"/>
+                </radialGradient>
+              </defs>
+              <rect width="200" height="200" fill="url(#bgGrad)"/>
+              <path d="M68 54c-14 2-24 14-24 28 0 8 3 15 9 21-4 4-6 10-6 15 0 14 11 25 25 25 6 0 12-2 16-6 4 4 10 6 16 6 14 0 25-11 25-25 0-5-2-11-6-15 6-6 9-13 9-21 0-14-10-26-24-28-3-10-12-16-23-16s-20 6-23 16Z" fill="none" stroke="rgba(214,162,50,.35)" stroke-width="1.5"/>
+              <g stroke="rgba(214,162,50,.32)" stroke-width="1.2" fill="none">
+                <line class="edge-draw" x1="70" y1="78" x2="100" y2="68" style="animation-delay:.1s"/>
+                <line class="edge-draw" x1="100" y1="68" x2="130" y2="78" style="animation-delay:.2s"/>
+                <line class="edge-draw" x1="70" y1="78" x2="66" y2="108" style="animation-delay:.3s"/>
+                <line class="edge-draw" x1="130" y1="78" x2="134" y2="108" style="animation-delay:.35s"/>
+                <line class="edge-draw" x1="66" y1="108" x2="90" y2="114" style="animation-delay:.45s"/>
+                <line class="edge-draw" x1="90" y1="114" x2="110" y2="114" style="animation-delay:.5s"/>
+                <line class="edge-draw" x1="110" y1="114" x2="134" y2="108" style="animation-delay:.55s"/>
+                <line class="edge-draw" x1="90" y1="114" x2="82" y2="138" style="animation-delay:.65s"/>
+                <line class="edge-draw" x1="110" y1="114" x2="118" y2="138" style="animation-delay:.7s"/>
+                <line class="edge-draw" x1="82" y1="138" x2="100" y2="148" style="animation-delay:.8s"/>
+                <line class="edge-draw" x1="118" y1="138" x2="100" y2="148" style="animation-delay:.85s"/>
+              </g>
+              <g>
+                <circle class="node-pulse" cx="70" cy="78" r="4.2" fill="rgba(244,244,242,.9)" style="animation-delay:.1s"/>
+                <circle class="node-pulse" cx="100" cy="68" r="5" fill="rgba(214,162,50,.95)" style="animation-delay:0s"/>
+                <circle class="node-pulse" cx="130" cy="78" r="4.2" fill="rgba(244,244,242,.9)" style="animation-delay:.15s"/>
+                <circle class="node-pulse" cx="66" cy="108" r="4" fill="rgba(214,162,50,.75)" style="animation-delay:.2s"/>
+                <circle class="node-pulse" cx="90" cy="114" r="4.6" fill="rgba(244,244,242,.9)" style="animation-delay:.25s"/>
+                <circle class="node-pulse" cx="110" cy="114" r="4.6" fill="rgba(244,244,242,.9)" style="animation-delay:.3s"/>
+                <circle class="node-pulse" cx="134" cy="108" r="4" fill="rgba(214,162,50,.75)" style="animation-delay:.35s"/>
+                <circle class="node-pulse" cx="82" cy="138" r="4" fill="rgba(214,162,50,.8)" style="animation-delay:.45s"/>
+                <circle class="node-pulse" cx="118" cy="138" r="4" fill="rgba(214,162,50,.8)" style="animation-delay:.5s"/>
+                <circle class="node-pulse" cx="100" cy="148" r="5.2" fill="rgba(214,162,50,.95)" style="animation-delay:.55s"/>
+              </g>
+            </svg>
           </div>
-          <!-- Orbiting dot -->
-          <div class="absolute inset-0 rounded-full border border-accent/10" style="animation: spin 12s linear infinite;">
-            <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent/60"></div>
+          <div class="absolute inset-0 rounded-full border border-accent/20" style="animation: spin 12s linear infinite;">
+            <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent/80"></div>
           </div>
         </div>
       </div>
@@ -282,7 +272,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
             </a>
           </div>
-          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug">Autism Classification — BrainHack</h3>
+          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug">Autism Classification: BrainHack</h3>
           <p class="text-mist-400 text-sm leading-relaxed mb-5">
             <span data-i18n="p0_desc">KMeans clustering + Logistic Regression on neuroimaging-derived features for ASD spectrum classification. Developed during an international BrainHack workshop.</span>
           </p>
@@ -320,7 +310,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
             </a>
           </div>
-          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug">Medallion Pipeline — Airflow + dbt</h3>
+          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug">Medallion Pipeline: Airflow + dbt</h3>
           <p class="text-mist-400 text-sm leading-relaxed mb-5">
             <span data-i18n="p2_desc">End-to-end Bronze→Silver→Gold pipeline with 29 automated data quality tests. dbt over DuckDB for modeling, Airflow for orchestration.</span>
           </p>
@@ -447,29 +437,29 @@
           <h3 class="font-mono text-sm text-accent mb-6" data-i18n="pub_label">// Publications &amp; Events</h3>
           <div class="space-y-4">
 
-            <a href="#" class="block group border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 hover:bg-ink-800/40 transition">
+            <a href="https://www.youtube.com/watch?v=battrsLXcBc&list=PLnLHYvmgbu-rXcAkhQ9nTLiIX3ItgNdPY&index=3" target="_blank" rel="noopener" class="block group border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 hover:bg-ink-800/40 transition">
               <div class="flex items-start gap-3">
-                <span class="mt-0.5 text-lg">🎙️</span>
+                <span class="mt-0.5 inline-flex w-7 h-7 rounded-lg border border-accent/40 text-accent items-center justify-center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15a3 3 0 003-3V8a3 3 0 10-6 0v4a3 3 0 003 3Z"/><path d="M19 11a7 7 0 01-14 0M12 18v3M8 21h8"/></svg></span>
                 <div>
-                  <p class="text-sm font-medium text-mist-100 group-hover:text-accent transition" data-i18n="pub_1_title">Podcast — Verdades Incómodas</p>
+                  <p class="text-sm font-medium text-mist-100 group-hover:text-accent transition" data-i18n="pub_1_title">Podcast: Verdades Incómodas</p>
                   <p class="text-xs text-mist-500 font-mono mt-0.5">BrainFreaks · 2025</p>
                 </div>
               </div>
             </a>
 
-            <a href="#" class="block group border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 hover:bg-ink-800/40 transition">
+            <a href="https://www.scielo.br/j/psoc/a/kpWpjbhsCvfszBp76TyFnDM/?lang=en" target="_blank" rel="noopener" class="block group border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 hover:bg-ink-800/40 transition">
               <div class="flex items-start gap-3">
-                <span class="mt-0.5 text-lg">📄</span>
+                <span class="mt-0.5 inline-flex w-7 h-7 rounded-lg border border-accent/40 text-accent items-center justify-center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/></svg></span>
                 <div>
                   <p class="text-sm font-medium text-mist-100 group-hover:text-accent transition" data-i18n="pub_2_title">Scientific Publication</p>
-                  <p class="text-xs text-mist-500 font-mono mt-0.5">Psicología y Sociedad — Scielo Brasil · 2025</p>
+                  <p class="text-xs text-mist-500 font-mono mt-0.5">Psicología y Sociedad, SciELO Brasil · 2025</p>
                 </div>
               </div>
             </a>
 
-            <a href="#" class="block group border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 hover:bg-ink-800/40 transition">
+            <a href="https://www.aacademica.org/000-012/330" target="_blank" rel="noopener" class="block group border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 hover:bg-ink-800/40 transition">
               <div class="flex items-start gap-3">
-                <span class="mt-0.5 text-lg">📑</span>
+                <span class="mt-0.5 inline-flex w-7 h-7 rounded-lg border border-accent/40 text-accent items-center justify-center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 7h12v14H8z"/><path d="M4 3h12v14"/></svg></span>
                 <div>
                   <p class="text-sm font-medium text-mist-100 group-hover:text-accent transition" data-i18n="pub_3_title">Systematic Review</p>
                   <p class="text-xs text-mist-500 font-mono mt-0.5">Universidad Favaloro · 2025</p>
@@ -478,16 +468,16 @@
             </a>
 
             <div class="grid grid-cols-2 gap-3">
-              <div class="border border-ink-700/60 rounded-xl p-4 bg-ink-900/30">
-                <p class="text-lg mb-1">🎤</p>
+              <a href="https://www.aacademica.org/000-012/330" target="_blank" rel="noopener" class="border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 transition block">
+                <span class="inline-flex w-7 h-7 rounded-lg border border-accent/40 text-accent items-center justify-center mb-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v10"/><path d="M8 7h8"/><path d="M8 21h8"/><path d="M12 13a5 5 0 0 0 5 5h1"/><path d="M12 13a5 5 0 0 1-5 5H6"/></svg></span>
                 <p class="text-xs font-medium text-mist-200" data-i18n="pub_4_title">Congress Talk</p>
                 <p class="text-xs text-mist-500 font-mono mt-0.5" data-i18n="pub_4_venue">Soc. Argentina de Neurociencias · 2024</p>
-              </div>
-              <div class="border border-ink-700/60 rounded-xl p-4 bg-ink-900/30">
-                <p class="text-lg mb-1">🔬</p>
+              </a>
+              <a href="https://www.scielo.br/j/psoc/a/kpWpjbhsCvfszBp76TyFnDM/?lang=en" target="_blank" rel="noopener" class="border border-ink-700/60 rounded-xl p-4 bg-ink-900/30 hover:border-accent/30 transition block">
+                <span class="inline-flex w-7 h-7 rounded-lg border border-accent/40 text-accent items-center justify-center mb-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6"/><path d="M10 3v6l-5 8a3 3 0 0 0 3 4h8a3 3 0 0 0 3-4l-5-8V3"/></svg></span>
                 <p class="text-xs font-medium text-mist-200" data-i18n="pub_5_title">New Frontiers in Neuroscience</p>
                 <p class="text-xs text-mist-500 font-mono mt-0.5">INECO · 2024</p>
-              </div>
+              </a>
             </div>
 
           </div>
@@ -506,10 +496,10 @@
 
       <div class="grid md:grid-cols-[3fr_2fr] gap-14">
         <div class="space-y-5 text-mist-300 leading-relaxed reveal">
-          <p data-i18n="about_p1">I'm an AI Engineer with an unusual background: I hold a degree in Psychology with a specialization in Neurosciences (Universidad Favaloro), and I'm currently completing a <strong class="text-mist-100">Master's in Artificial Intelligence at UdeSA</strong>. That combination shapes everything I build.</p>
-          <p data-i18n="about_p2">My core interest is the intersection of <strong class="text-mist-100">AI and mental health</strong> — using machine learning to make sense of brain signals, clinical data, and behavioral patterns. I've co-authored indexed publications in Neuroscience and Behavioral Science, and I actively teach AI for psychology and clinical settings.</p>
-          <p data-i18n="about_p3">Day to day I work as Academic Coordinator at <strong class="text-mist-100">Humai</strong>, where I run the education team and teach AI courses. I'm also a freelance data analyst at Universidad Favaloro's Vocational Psychology department — giving me both the production-systems side and the research side of the field.</p>
-          <p data-i18n="about_p4">Technically I live in the space between Data Engineering (pipelines, dbt, Airflow), Applied ML (PyTorch, LLMs, RAG), and product (Next.js, FastAPI). I care about code that ships — and documentation that helps the next person understand why.</p>
+          <p data-i18n="about_p1">I'm a Data Scientist with an unusual background: I hold a degree in Psychology with a specialization in Neurosciences (Universidad Favaloro), and I'm currently completing a <strong class="text-mist-100">Master's in Artificial Intelligence at UdeSA</strong>. That combination shapes how I design products and research.</p>
+          <p data-i18n="about_p2">My core interest is the intersection of <strong class="text-mist-100">AI and mental health</strong>, using machine learning to make sense of brain signals, clinical data, and behavioral patterns. I've co-authored indexed publications in Neuroscience and Behavioral Science, and I actively teach AI for psychology and clinical settings.</p>
+          <p data-i18n="about_p3">Today I work as <strong class="text-mist-100">Neuroscience and AI Specialist at Humai</strong>, leading educational strategy and advanced AI training. I'm also a freelance data analyst at Universidad Favaloro's Vocational Psychology department, which keeps me close to both production systems and applied research.</p>
+          <p data-i18n="about_p4">Technically I live in the space between Data Engineering (pipelines, dbt, Airflow), Applied ML (PyTorch, LLMs, RAG), and product (Next.js, FastAPI). I care about code that ships, and documentation that helps the next person understand why.</p>
         </div>
 
         <div class="reveal" style="transition-delay:.1s">
@@ -542,6 +532,8 @@
                 <span class="tag px-2.5 py-1 rounded-lg bg-ink-800 border border-ink-700 text-mist-200">DuckDB</span>
                 <span class="tag px-2.5 py-1 rounded-lg bg-ink-800 border border-ink-700 text-mist-200">Pandas</span>
                 <span class="tag px-2.5 py-1 rounded-lg bg-ink-800 border border-ink-700 text-mist-200">Polars</span>
+                <span class="tag px-2.5 py-1 rounded-lg bg-ink-800 border border-ink-700 text-mist-200">Power BI</span>
+                <span class="tag px-2.5 py-1 rounded-lg bg-ink-800 border border-ink-700 text-mist-200">Looker Studio</span>
               </div>
             </div>
             <div>
@@ -568,9 +560,28 @@
             <div class="text-xs font-mono text-mist-500 mb-3" data-i18n="stack_certs">Key certifications</div>
             <div class="space-y-2 text-xs text-mist-300">
               <div class="flex items-center gap-2"><span class="text-accent">▸</span> AWS Certified AI Practitioner · 2025</div>
-              <div class="flex items-center gap-2"><span class="text-accent">▸</span> <span data-i18n="cert_dl">Deep Learning School — FCEN-UBA · 2025</span></div>
-              <div class="flex items-center gap-2"><span class="text-accent">▸</span> LLMs — Humai · 2025</div>
-              <div class="flex items-center gap-2"><span class="text-accent">▸</span> C2 English (CPE) — Cambridge · 2021</div>
+              <div class="flex items-center gap-2"><span class="text-accent">▸</span> <span data-i18n="cert_dl">Deep Learning School, FCEN-UBA · 2025</span></div>
+              <div class="flex items-center gap-2"><span class="text-accent">▸</span> LLMs, Humai · 2025</div>
+              <div class="flex items-center gap-2"><span class="text-accent">▸</span> C2 English (CPE), Cambridge · 2021</div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-ink-700/50">
+            <div class="text-xs font-mono text-mist-500 mb-3" data-i18n="exp_snapshot">Experience snapshot</div>
+            <div class="space-y-2 text-xs text-mist-300">
+              <div><span class="text-mist-100">Humai</span>, Neuroscience and AI Specialist · 2023-present</div>
+              <div><span class="text-mist-100">Universidad Favaloro</span>, Freelance Data Analyst · 2026-present</div>
+              <div><span class="text-mist-100">Further Languages</span>, Quality Control Manager · 2020-2022</div>
+              <div><span class="text-mist-100">Universidad Favaloro</span>, Associate Researcher · 2019-2023</div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-ink-700/50">
+            <div class="text-xs font-mono text-mist-500 mb-3" data-i18n="edu_snapshot">Education snapshot</div>
+            <div class="space-y-2 text-xs text-mist-300">
+              <div><span class="text-mist-100">MSc in AI</span>, UdeSA · 2025-present</div>
+              <div><span class="text-mist-100">Psychology</span>, Universidad Favaloro · 2018-2024</div>
+              <div><span class="text-mist-100">Data Scientist program</span>, Coder House · 2022-2023</div>
             </div>
           </div>
         </div>
@@ -584,18 +595,18 @@
       <div class="mb-10 reveal">
         <p class="sec-num mb-2">04</p>
         <h2 class="display text-4xl md:text-5xl text-mist-100" data-i18n="contact_title">Get in touch</h2>
-        <p class="mt-3 text-mist-400" data-i18n="contact_subtitle">Open to remote / relocation. Roles in AI Engineering, Data Science, and ML Research.</p>
+        <p class="mt-3 text-mist-400" data-i18n="contact_subtitle">Open to remote or relocation. Roles in Data Science, AI, and ML Research.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 reveal">
         <div class="space-y-4">
-          <a href="mailto:sebastianmeschhenriques@gmail.com" class="flex items-center gap-3.5 group">
+          <a href="mailto:lic.mesch@gmail.com" class="flex items-center gap-3.5 group">
             <div class="w-11 h-11 rounded-xl border border-ink-700 bg-ink-800 flex items-center justify-center text-accent group-hover:border-accent/50 group-hover:bg-ink-700 transition shrink-0">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l9 6 9-6M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8M3 8l2-2h14l2 2"/></svg>
             </div>
             <div>
               <div class="text-xs text-mist-500 font-mono" data-i18n="contact_email">Email</div>
-              <div class="text-sm text-mist-100 group-hover:text-accent transition">sebastianmeschhenriques@gmail.com</div>
+              <div class="text-sm text-mist-100 group-hover:text-accent transition">lic.mesch@gmail.com</div>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/sebastian-mesch-henriques/" target="_blank" rel="noopener" class="flex items-center gap-3.5 group">
@@ -627,8 +638,11 @@
           </div>
         </div>
 
-        <!-- Contact form (replace YOUR_FORM_ID with your Formspree endpoint) -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-3">
+        <!-- Contact form with FormSubmit -->
+        <form action="https://formsubmit.co/lic.mesch@gmail.com" method="POST" class="space-y-3">
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde smesch1.github.io" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
           <div>
             <label class="block text-xs font-mono text-mist-500 mb-1.5" data-i18n="form_name">Name</label>
             <input type="text" name="name" required class="w-full px-3.5 py-2.5 bg-ink-800 border border-ink-700 rounded-xl text-mist-100 text-sm focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/20 transition placeholder:text-mist-600" />
@@ -652,7 +666,6 @@
   <!-- FOOTER -->
   <footer class="py-10 px-6 border-t border-ink-700/40">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-mist-500 font-mono" data-i18n="footer_text">Built with HTML, Tailwind, and a lot of coffee.</p>
       <p class="text-xs text-mist-500 font-mono">© 2026 Sebastián Mesch Henriques</p>
     </div>
   </footer>
@@ -666,9 +679,9 @@
     const translations = {
       en: {
         nav_projects:"Projects", nav_research:"Research", nav_about:"About", nav_contact:"Contact",
-        badge_neuro:"Neuroscience background", badge_mental:"Mental health · AI",
-        hero_desc:"I build AI systems that understand humans — combining a neuroscience background with machine learning, LLMs, and production data pipelines. Studying the MSc in AI at UdeSA. Based in Buenos Aires.",
-        hero_cta_projects:"See projects →", hero_cta_contact:"Contact", hero_cta_cv:"Download CV",
+        badge_neuro:"Neuroscience background", badge_mental:"Mental health + AI",
+        hero_desc:"I build AI systems that understand people, combining neuroscience, machine learning, LLMs, and production data pipelines. MSc in AI at UdeSA. Based in Buenos Aires.",
+        hero_cta_projects:"See projects →", hero_cta_contact:"Contact", hero_cta_cv:"View research",
         hero_location:"open to remote",
         projects_title:"Featured Projects", projects_all:"all repos →",
         p0_desc:"KMeans clustering + Logistic Regression on neuroimaging-derived features for ASD spectrum classification. Developed during an international BrainHack workshop.",
@@ -686,29 +699,30 @@
         teach_4_title:"AI Tools",
         teach_5_title:"Social Psychology (Adj. Professor)",
         pub_label:"// Publications &amp; Events",
-        pub_1_title:"Podcast — Verdades Incómodas",
+        pub_1_title:"Podcast: Verdades Incómodas",
         pub_2_title:"Scientific Publication",
         pub_3_title:"Systematic Review",
         pub_4_title:"Congress Talk", pub_4_venue:"Soc. Argentina de Neurociencias · 2024",
         pub_5_title:"New Frontiers in Neuroscience",
         about_title:"About",
-        about_p1:"I'm an AI Engineer with an unusual background: I hold a degree in Psychology with a specialization in Neurosciences (Universidad Favaloro), and I'm currently completing a <strong class='text-mist-100'>Master's in AI at UdeSA</strong>. That combination shapes everything I build.",
-        about_p2:"My core interest is the intersection of <strong class='text-mist-100'>AI and mental health</strong> — using machine learning to make sense of brain signals, clinical data, and behavioral patterns. I've co-authored indexed publications in Neuroscience and Behavioral Science, and I actively teach AI for psychology and clinical settings.",
-        about_p3:"Day to day I work as Academic Coordinator at <strong class='text-mist-100'>Humai</strong>, where I run the education team and teach AI courses. I'm also a freelance data analyst at Universidad Favaloro's Vocational Psychology department — giving me both the production-systems side and the research side of the field.",
-        about_p4:"Technically I live in the space between Data Engineering (pipelines, dbt, Airflow), Applied ML (PyTorch, LLMs, RAG), and product (Next.js, FastAPI). I care about code that ships — and documentation that helps the next person understand why.",
+        about_p1:"I'm a Data Scientist with an unusual background: I hold a degree in Psychology with a specialization in Neurosciences (Universidad Favaloro), and I'm currently completing a <strong class='text-mist-100'>Master's in AI at UdeSA</strong>. That combination shapes how I design products and research.",
+        about_p2:"My core interest is the intersection of <strong class='text-mist-100'>AI and mental health</strong>, using machine learning to make sense of brain signals, clinical data, and behavioral patterns. I've co-authored indexed publications in Neuroscience and Behavioral Science, and I actively teach AI for psychology and clinical settings.",
+        about_p3:"Today I work as <strong class='text-mist-100'>Neuroscience and AI Specialist at Humai</strong>, leading educational strategy and advanced AI training. I'm also a freelance data analyst at Universidad Favaloro's Vocational Psychology department, which keeps me close to both production systems and applied research.",
+        about_p4:"Technically I live in the space between Data Engineering (pipelines, dbt, Airflow), Applied ML (PyTorch, LLMs, RAG), and product (Next.js, FastAPI). I care about code that ships, and documentation that helps the next person understand why.",
         stack_lang:"Languages", stack_ai:"AI / ML", stack_data:"Data Engineering", stack_neuro:"Neuroscience Tools", stack_backend:"Backend / Tooling",
-        stack_certs:"Key certifications", cert_dl:"Deep Learning School — FCEN-UBA · 2025",
+        stack_certs:"Key certifications", cert_dl:"Deep Learning School, FCEN-UBA · 2025",
+        exp_snapshot:"Experience snapshot", edu_snapshot:"Education snapshot",
         contact_title:"Get in touch",
-        contact_subtitle:"Open to remote / relocation. Roles in AI Engineering, Data Science, and ML Research.",
-        contact_email:"Email", contact_location:"Location", contact_location_value:"Buenos Aires, Argentina · open to remote &amp; relocation",
+        contact_subtitle:"Open to remote or relocation. Roles in Data Science, AI, and ML Research.",
+        contact_email:"Email", contact_location:"Location", contact_location_value:"Buenos Aires, Argentina, open to remote or relocation",
         form_name:"Name", form_email:"Email", form_message:"Message", form_send:"Send message",
-        footer_text:"Built with HTML, Tailwind, and a lot of coffee."
+        footer_text:""
       },
       es: {
         nav_projects:"Proyectos", nav_research:"Investigación", nav_about:"Sobre mí", nav_contact:"Contacto",
-        badge_neuro:"Background en Neurociencias", badge_mental:"Salud mental · IA",
-        hero_desc:"Construyo sistemas de IA que entienden a las personas — combinando un background en neurociencias con machine learning, LLMs y pipelines de datos en producción. Cursando la Maestría en IA en la UdeSA. Basado en Buenos Aires.",
-        hero_cta_projects:"Ver proyectos →", hero_cta_contact:"Contacto", hero_cta_cv:"Descargar CV",
+        badge_neuro:"Background en Neurociencias", badge_mental:"Salud mental + IA",
+        hero_desc:"Construyo sistemas de IA que entienden a las personas, combinando neurociencias, machine learning, LLMs y pipelines de datos en producción. Cursando la Maestría en IA en la UdeSA. Basado en Buenos Aires.",
+        hero_cta_projects:"Ver proyectos →", hero_cta_contact:"Contacto", hero_cta_cv:"Ver investigación",
         hero_location:"abierto a remoto",
         projects_title:"Proyectos destacados", projects_all:"todos los repos →",
         p0_desc:"Clustering (KMeans) + clasificación supervisada (Regresión Logística) sobre features de neuroimagen para clasificación del espectro autista. Desarrollado en un workshop internacional BrainHack.",
@@ -726,23 +740,24 @@
         teach_4_title:"Herramientas de IA",
         teach_5_title:"Psicología Social (Docente Adjunto)",
         pub_label:"// Publicaciones y Eventos",
-        pub_1_title:"Podcast — Verdades Incómodas",
+        pub_1_title:"Podcast: Verdades Incómodas",
         pub_2_title:"Publicación Científica",
         pub_3_title:"Revisión Sistemática",
         pub_4_title:"Presentación en Congreso", pub_4_venue:"Soc. Argentina de Neurociencias · 2024",
         pub_5_title:"Nuevas Fronteras en Neurociencias",
         about_title:"Sobre mí",
-        about_p1:"Soy AI Engineer con un background poco convencional: soy Licenciado en Psicología con orientación en Neurociencias (Universidad Favaloro) y estoy cursando la <strong class='text-mist-100'>Maestría en IA en la UdeSA</strong>. Esa combinación moldea todo lo que construyo.",
-        about_p2:"Mi interés central es la intersección entre <strong class='text-mist-100'>IA y salud mental</strong> — usar machine learning para interpretar señales cerebrales, datos clínicos y patrones de comportamiento. Tengo publicaciones científicas indexadas en Neurociencias y Ciencias del Comportamiento, y doy clases de IA para entornos clínicos y de investigación.",
-        about_p3:"En el día a día soy Coordinador Académico en <strong class='text-mist-100'>Humai</strong>, donde dirijo el equipo educativo y dicto cursos de IA. También trabajo freelance como Analista de Datos en el departamento de Orientación Vocacional de la Universidad Favaloro, lo que me da tanto el lado de sistemas productivos como el de investigación.",
-        about_p4:"Técnicamente vivo en el espacio entre Data Engineering (pipelines, dbt, Airflow), ML aplicado (PyTorch, LLMs, RAG) y producto (Next.js, FastAPI). Me importa el código que funciona en producción — y la documentación que le sirve a la próxima persona.",
+        about_p1:"Soy Data Scientist con un background poco convencional: soy Licenciado en Psicología con orientación en Neurociencias (Universidad Favaloro) y estoy cursando la <strong class='text-mist-100'>Maestría en IA en la UdeSA</strong>. Esa combinación moldea cómo diseño productos e investigación.",
+        about_p2:"Mi interés central es la intersección entre <strong class='text-mist-100'>IA y salud mental</strong>, usar machine learning para interpretar señales cerebrales, datos clínicos y patrones de comportamiento. Tengo publicaciones científicas indexadas en Neurociencias y Ciencias del Comportamiento, y doy clases de IA para entornos clínicos y de investigación.",
+        about_p3:"Actualmente soy <strong class='text-mist-100'>Especialista en Neurociencias e IA en Humai</strong>, liderando estrategia educativa y formación avanzada en IA. También trabajo freelance como Analista de Datos en el departamento de Orientación Vocacional de la Universidad Favaloro, lo que me mantiene cerca de sistemas productivos e investigación aplicada.",
+        about_p4:"Técnicamente vivo en el espacio entre Data Engineering (pipelines, dbt, Airflow), ML aplicado (PyTorch, LLMs, RAG) y producto (Next.js, FastAPI). Me importa el código que funciona en producción, y la documentación que le sirve a la próxima persona.",
         stack_lang:"Lenguajes", stack_ai:"IA / ML", stack_data:"Data Engineering", stack_neuro:"Herramientas de Neuroimagen", stack_backend:"Backend / Tooling",
-        stack_certs:"Certificaciones destacadas", cert_dl:"Escuela de Deep Learning — FCEN-UBA · 2025",
+        stack_certs:"Certificaciones destacadas", cert_dl:"Escuela de Deep Learning, FCEN-UBA · 2025",
+        exp_snapshot:"Resumen de experiencia", edu_snapshot:"Resumen de formación",
         contact_title:"Contacto",
-        contact_subtitle:"Abierto a remoto / relocation. Posiciones en AI Engineering, Data Science e Investigación en ML.",
-        contact_email:"Email", contact_location:"Ubicación", contact_location_value:"Buenos Aires, Argentina · abierto a remoto y relocation",
+        contact_subtitle:"Abierto a remoto o relocation. Posiciones en Data Science, IA e Investigación en ML.",
+        contact_email:"Email", contact_location:"Ubicación", contact_location_value:"Buenos Aires, Argentina, abierto a remoto o relocation",
         form_name:"Nombre", form_email:"Email", form_message:"Mensaje", form_send:"Enviar mensaje",
-        footer_text:"Hecho con HTML, Tailwind y mucho café."
+        footer_text:""
       }
     };
 
