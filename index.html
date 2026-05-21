@@ -209,35 +209,41 @@
                 </radialGradient>
               </defs>
               <rect width="200" height="200" fill="url(#bgGrad)"/>
-              <path d="M58 108c0-11 5-21 13-27 6-13 18-21 32-21 8 0 15 2 21 6 7-5 16-8 25-8 14 0 27 8 33 20 10 6 16 17 16 30 0 18-13 33-31 37-7 9-18 15-30 15-9 0-17-3-24-8-5 2-10 3-15 3-22 0-40-18-40-40 0-2 0-5 1-7Z" fill="none" stroke="rgba(214,162,50,.34)" stroke-width="1.3"/>
-              <g stroke="rgba(244,244,242,.48)" stroke-width="1.3" fill="none">
-                <line class="edge-draw" x1="72" y1="100" x2="90" y2="86" style="animation-delay:.08s"/>
-                <line class="edge-draw" x1="90" y1="86" x2="112" y2="84" style="animation-delay:.14s"/>
-                <line class="edge-draw" x1="112" y1="84" x2="132" y2="92" style="animation-delay:.2s"/>
-                <line class="edge-draw" x1="132" y1="92" x2="146" y2="108" style="animation-delay:.26s"/>
-                <line class="edge-draw" x1="72" y1="100" x2="72" y2="122" style="animation-delay:.32s"/>
-                <line class="edge-draw" x1="72" y1="122" x2="92" y2="132" style="animation-delay:.38s"/>
-                <line class="edge-draw" x1="92" y1="132" x2="110" y2="130" style="animation-delay:.44s"/>
-                <line class="edge-draw" x1="110" y1="130" x2="126" y2="118" style="animation-delay:.5s"/>
-                <line class="edge-draw" x1="126" y1="118" x2="146" y2="108" style="animation-delay:.56s"/>
-                <line class="edge-draw" x1="92" y1="132" x2="102" y2="147" style="animation-delay:.62s"/>
-                <line class="edge-draw" x1="102" y1="147" x2="120" y2="142" style="animation-delay:.68s"/>
-                <line class="edge-draw" x1="90" y1="86" x2="92" y2="132" style="animation-delay:.74s"/>
-                <line class="edge-draw" x1="112" y1="84" x2="110" y2="130" style="animation-delay:.8s"/>
-                <line class="edge-draw" x1="132" y1="92" x2="126" y2="118" style="animation-delay:.86s"/>
-              </g>
-              <g>
-                <circle class="node-pulse" cx="72" cy="100" r="3.8" fill="rgba(214,162,50,.9)" style="animation-delay:.05s"/>
-                <circle class="node-pulse" cx="90" cy="86" r="4.2" fill="rgba(244,244,242,.95)" style="animation-delay:.1s"/>
-                <circle class="node-pulse" cx="112" cy="84" r="4.8" fill="rgba(214,162,50,.92)" style="animation-delay:.15s"/>
-                <circle class="node-pulse" cx="132" cy="92" r="4.2" fill="rgba(244,244,242,.95)" style="animation-delay:.2s"/>
-                <circle class="node-pulse" cx="146" cy="108" r="3.8" fill="rgba(214,162,50,.86)" style="animation-delay:.25s"/>
-                <circle class="node-pulse" cx="72" cy="122" r="3.6" fill="rgba(244,244,242,.9)" style="animation-delay:.3s"/>
-                <circle class="node-pulse" cx="92" cy="132" r="4.7" fill="rgba(244,244,242,.96)" style="animation-delay:.35s"/>
-                <circle class="node-pulse" cx="110" cy="130" r="5.6" fill="rgba(214,162,50,.9)" style="animation-delay:.4s"/>
-                <circle class="node-pulse" cx="126" cy="118" r="4.5" fill="rgba(244,244,242,.93)" style="animation-delay:.45s"/>
-                <circle class="node-pulse" cx="102" cy="147" r="4.2" fill="rgba(244,244,242,.92)" style="animation-delay:.5s"/>
-                <circle class="node-pulse" cx="120" cy="142" r="3.8" fill="rgba(214,162,50,.82)" style="animation-delay:.55s"/>
+              <!-- Editable brain silhouette -->
+              <path id="brain-outline" d="M38 106c0-12 5-23 13-32 5-17 19-29 37-29 8 0 15 2 21 6 8-6 18-10 29-10 18 0 33 10 40 25 11 8 18 21 18 35 0 22-16 41-38 45-7 10-19 17-32 17-8 0-16-2-22-6-6 2-11 3-17 3-28 0-51-23-51-51 0-1 0-2 0-3Z" fill="none" stroke="rgba(214,162,50,.36)" stroke-width="1.4"/>
+
+              <!-- Editable network: tweak translate/scale first, then node/edge coordinates -->
+              <g id="brain-network" transform="translate(2,-2) scale(1.08)">
+                <g id="brain-edges" stroke="rgba(244,244,242,.56)" stroke-width="1.32" fill="none">
+                  <line class="edge-draw" x1="66" y1="88" x2="84" y2="76" style="animation-delay:.08s"/>
+                  <line class="edge-draw" x1="84" y1="76" x2="102" y2="74" style="animation-delay:.14s"/>
+                  <line class="edge-draw" x1="102" y1="74" x2="121" y2="79" style="animation-delay:.2s"/>
+                  <line class="edge-draw" x1="121" y1="79" x2="138" y2="92" style="animation-delay:.26s"/>
+                  <line class="edge-draw" x1="66" y1="88" x2="66" y2="106" style="animation-delay:.32s"/>
+                  <line class="edge-draw" x1="66" y1="106" x2="80" y2="119" style="animation-delay:.38s"/>
+                  <line class="edge-draw" x1="80" y1="119" x2="99" y2="116" style="animation-delay:.44s"/>
+                  <line class="edge-draw" x1="99" y1="116" x2="116" y2="106" style="animation-delay:.5s"/>
+                  <line class="edge-draw" x1="116" y1="106" x2="132" y2="108" style="animation-delay:.56s"/>
+                  <line class="edge-draw" x1="132" y1="108" x2="138" y2="92" style="animation-delay:.62s"/>
+                  <line class="edge-draw" x1="80" y1="119" x2="91" y2="136" style="animation-delay:.68s"/>
+                  <line class="edge-draw" x1="91" y1="136" x2="110" y2="132" style="animation-delay:.74s"/>
+                  <line class="edge-draw" x1="110" y1="132" x2="122" y2="122" style="animation-delay:.8s"/>
+                </g>
+                <g id="brain-nodes">
+                  <circle class="node-pulse" cx="66" cy="88" r="3.8" fill="rgba(214,162,50,.92)" style="animation-delay:.06s"/>
+                  <circle class="node-pulse" cx="84" cy="76" r="4.2" fill="rgba(244,244,242,.96)" style="animation-delay:.12s"/>
+                  <circle class="node-pulse" cx="102" cy="74" r="5.3" fill="rgba(214,162,50,.94)" style="animation-delay:.18s"/>
+                  <circle class="node-pulse" cx="121" cy="79" r="4.2" fill="rgba(244,244,242,.95)" style="animation-delay:.24s"/>
+                  <circle class="node-pulse" cx="138" cy="92" r="4" fill="rgba(214,162,50,.86)" style="animation-delay:.3s"/>
+                  <circle class="node-pulse" cx="66" cy="106" r="3.9" fill="rgba(244,244,242,.9)" style="animation-delay:.36s"/>
+                  <circle class="node-pulse" cx="80" cy="119" r="5.1" fill="rgba(244,244,242,.97)" style="animation-delay:.42s"/>
+                  <circle class="node-pulse" cx="99" cy="116" r="6" fill="rgba(214,162,50,.9)" style="animation-delay:.48s"/>
+                  <circle class="node-pulse" cx="116" cy="106" r="4.7" fill="rgba(244,244,242,.94)" style="animation-delay:.54s"/>
+                  <circle class="node-pulse" cx="132" cy="108" r="4.1" fill="rgba(214,162,50,.84)" style="animation-delay:.6s"/>
+                  <circle class="node-pulse" cx="91" cy="136" r="4.2" fill="rgba(244,244,242,.93)" style="animation-delay:.66s"/>
+                  <circle class="node-pulse" cx="110" cy="132" r="4" fill="rgba(214,162,50,.82)" style="animation-delay:.72s"/>
+                  <circle class="node-pulse" cx="122" cy="122" r="3.8" fill="rgba(244,244,242,.9)" style="animation-delay:.78s"/>
+                </g>
               </g>
             </svg>
           </div>
