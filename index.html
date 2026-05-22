@@ -123,7 +123,23 @@
   <nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ink-950/80 border-b border-ink-700/40">
     <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-2 group">
-        <span class="font-mono text-xs text-accent opacity-70 group-hover:opacity-100 transition">SMH</span>
+        <span class="text-accent opacity-70 group-hover:opacity-100 transition">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
+            <line x1="12" y1="9.5" x2="12" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="14.2" y1="10.7" x2="19" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="14.2" y1="13.3" x2="19" y2="16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="12" y1="14.5" x2="12" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="9.8" y1="13.3" x2="5" y2="16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="9.8" y1="10.7" x2="5" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="4" r="1.2" fill="currentColor"/>
+            <circle cx="19" cy="7.5" r="1.2" fill="currentColor"/>
+            <circle cx="19" cy="16.5" r="1.2" fill="currentColor"/>
+            <circle cx="12" cy="20" r="1.2" fill="currentColor"/>
+            <circle cx="5" cy="16.5" r="1.2" fill="currentColor"/>
+            <circle cx="5" cy="7.5" r="1.2" fill="currentColor"/>
+          </svg>
+        </span>
         <span class="w-px h-4 bg-ink-600"></span>
         <span class="text-mist-300 text-sm font-light group-hover:text-mist-100 transition">Sebastián Mesch Henriques</span>
       </a>
@@ -151,9 +167,9 @@
       <div>
         <!-- Role badges -->
         <div class="animate-fade-up flex flex-wrap gap-2 mb-7">
-          <span class="tag px-3 py-1.5 rounded-full border border-accent/30 bg-accent/8 text-accent">AI Engineer & Data Scientist</span>
-          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_neuro">Neurocientífico</span>
-          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_mental">Mental health + AI</span>
+          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_role">AI Engineer Jr.</span>
+          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_neuro">Data Scientist</span>
+          <span class="tag px-3 py-1.5 rounded-full border border-ink-600 bg-ink-800/50 text-mist-400" data-i18n="badge_mental">Neurocientífico</span>
         </div>
 
         <!-- Name -->
@@ -163,7 +179,7 @@
 
         <!-- Tagline -->
         <p class="animate-fade-up-3 mt-5 text-lg text-mist-300 font-light max-w-lg leading-relaxed">
-          <span data-i18n="hero_desc">I work on applied AI projects focused on data analysis and real-world implementation. MSc in AI at UdeSA. Based in Buenos Aires.</span>
+          <span data-i18n="hero_desc">Licensed Psychologist and Data Scientist bridging cognitive neuroscience and deep learning. Academic Coordinator at Humai, researcher at Universidad Favaloro, and MSc in AI student at UdeSA.</span>
         </p>
 
         <!-- CTAs -->
@@ -322,6 +338,7 @@
                 <line class="edge-draw" stroke="#D6A232" stroke-width="1.6"  stroke-opacity="0.88" x1="132" y1="152" x2="138" y2="176" style="animation-delay:.98s"/><!-- S2 → S4 -->
                 <!-- <line class="edge-draw" stroke="#CFD3DA" stroke-width="1.0"  stroke-opacity="0.7"  x1="123" y1="174" x2="138" y2="176" style="animation-delay:1.0s"/><!-- S3 → S4 -->
 
+                <g id="synapse-signal"></g>
                 <g id="brain-nodes">
                   <!-- ╔═ Outline nodes (silhouette) ═══════════════════════════════════════╗ -->
                   <circle class="node-pulse" cx="32"  cy="86"  r="3.3" fill="#F4F4F2" style="animation-delay:.02s"/><!-- T1 -->
@@ -404,20 +421,18 @@
 
         <article class="card group border border-ink-700/70 rounded-2xl p-6 bg-ink-900/40 reveal" style="transition-delay:.08s">
           <div class="flex items-start justify-between mb-4">
-            <span class="tag text-accent">DL · NLP · Time Series</span>
-            <a href="https://github.com/SMESCH1/merval-sentiment-analysis-prediction" target="_blank" rel="noopener" class="text-mist-500 hover:text-accent transition ml-2 shrink-0" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
-            </a>
+            <span class="tag text-accent" data-i18n="p1_tags">Data Science · Behavioral Modeling · Telemetry</span>
+            <span class="text-mist-500 ml-2 shrink-0 font-mono text-xs">LITERA Lab</span>
           </div>
-          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug">MERVAL Sentiment & Prediction</h3>
+          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug" data-i18n="p1_title">Atenti (NeuroFlow)</h3>
           <p class="text-mist-400 text-sm leading-relaxed mb-5">
-            <span data-i18n="p1_desc">Bidirectional LSTM predicting next-day MERVAL direction using Reddit sentiment. Hyperparameter-tuned with Optuna, validated with walk-forward cross-validation.</span>
+            <span data-i18n="p1_desc">Research project utilizing smartphone logs and telemetry to cluster digital addiction risk profiles and trace neurodevelopmental behavioral patterns.</span>
           </p>
           <div class="flex flex-wrap gap-1.5 text-xs">
-            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">PyTorch</span>
-            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">pysentimiento</span>
-            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Optuna</span>
-            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">yfinance</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Python</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Clustering</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Data pipelines</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Behavioral Sci</span>
           </div>
         </article>
 
@@ -499,6 +514,44 @@
             <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">unittest</span>
             <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">GitHub Actions</span>
             <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Render</span>
+          </div>
+        </article>
+
+        <article class="card group border border-ink-700/70 rounded-2xl p-6 bg-ink-900/40 reveal" style="transition-delay:.48s">
+          <div class="flex items-start justify-between mb-4">
+            <span class="tag text-accent" data-i18n="p5_tags">DL · Finance · NLP</span>
+            <a href="https://github.com/SMESCH1/stock_price_prediction_MIA" target="_blank" rel="noopener" class="text-mist-500 hover:text-accent transition ml-2 shrink-0" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug" data-i18n="p5_title">Stock Price Prediction (MSc)</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-5">
+            <span data-i18n="p5_desc">LSTM, GRU and Transformer models for Argentine asset price prediction, combining financial time series with Reddit and news sentiment analysis using BETO.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">PyTorch</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">BETO / NLP</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">yfinance</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">Reddit API</span>
+          </div>
+        </article>
+
+        <article class="card group border border-ink-700/70 rounded-2xl p-6 bg-ink-900/40 reveal" style="transition-delay:.56s">
+          <div class="flex items-start justify-between mb-4">
+            <span class="tag text-accent" data-i18n="p6_tags">Neuroscience · Deep Learning · fMRI</span>
+            <a href="https://github.com/SMESCH1/ASD-detection" target="_blank" rel="noopener" class="text-mist-500 hover:text-accent transition ml-2 shrink-0" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17a10.9 10.9 0 012.86-.38c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.23 2.76.11 3.05.74.8 1.18 1.82 1.18 3.07 0 4.4-2.7 5.36-5.27 5.65.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <h3 class="text-lg font-semibold text-mist-100 mb-2 group-hover:text-accent transition leading-snug" data-i18n="p6_title">ASD Detection via fMRI (Thesis)</h3>
+          <p class="text-mist-400 text-sm leading-relaxed mb-5">
+            <span data-i18n="p6_desc">Binary ASD/Control classification on rs-fMRI functional connectivity from ABIDE (1102 subjects, AAL2 atlas, 94 ROIs). Benchmarked at AUC 0.79, exploring MLP and GNN architectures.</span>
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">scikit-learn</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">PyTorch / GNN</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">MLflow</span>
+            <span class="tag px-2 py-0.5 rounded-full bg-ink-700/60 border border-ink-600 text-mist-300">fMRI / ABIDE</span>
           </div>
         </article>
 
@@ -797,17 +850,25 @@
     const translations = {
       en: {
         nav_projects:"Projects", nav_research:"Research", nav_about:"About", nav_contact:"Contact",
-        badge_neuro:"Neuroscience background", badge_mental:"Mental health + AI",
-        hero_desc:"I work on applied AI projects focused on data analysis and real-world implementation. MSc in AI at UdeSA. Based in Buenos Aires.",
+        badge_role:"AI Engineer Jr.", badge_neuro:"Data Scientist", badge_mental:"Neuroscientist",
+        hero_desc:"Licensed Psychologist and Data Scientist bridging cognitive neuroscience and deep learning. Academic Coordinator at Humai, researcher at Universidad Favaloro, and MSc in AI student at UdeSA.",
         hero_cta_projects:"See projects →", hero_cta_contact:"Contact", hero_cta_cv:"View research",
         hero_location:"open to remote",
         projects_title:"Featured Projects", projects_all:"all repos →",
         p0_desc:"KMeans clustering + Logistic Regression on neuroimaging-derived features for ASD spectrum classification. Developed during an international BrainHack workshop.",
-        p1_desc:"Bidirectional LSTM predicting next-day MERVAL direction using Reddit sentiment. Hyperparameter-tuned with Optuna, validated with walk-forward cross-validation.",
+        p1_tags:"Data Science · Behavioral Modeling · Telemetry",
+        p1_title:"Atenti (NeuroFlow)",
+        p1_desc:"Research project utilizing smartphone logs and telemetry to cluster digital addiction risk profiles and trace neurodevelopmental behavioral patterns.",
         p2_desc:"End-to-end Bronze→Silver→Gold pipeline with 29 automated data quality tests. dbt over DuckDB for modeling, Airflow for orchestration.",
         p3_desc:"LLM-powered editorial pipeline generating daily Telegram posts about the Argentine national team. Custom anti-repetition RAG system, runs daily via GitHub Actions.",
         p4b_desc:"Gamified philosophy learning app à la Duolingo. Themed islands, missions with interactive theory and quizzes, XP and daily streaks. Next.js 16 + Supabase + Tailwind v4.",
         p4_desc:"REST payments API with explicit state machine, unit + integration tests, GitHub Actions CI, and auto-deploy to Render.",
+        p5_tags:"DL · Finance · NLP",
+        p5_title:"Stock Price Prediction (MSc)",
+        p5_desc:"LSTM, GRU and Transformer models for Argentine asset price prediction, combining financial time series with Reddit and news sentiment analysis using BETO.",
+        p6_tags:"Neuroscience · Deep Learning · fMRI",
+        p6_title:"ASD Detection via fMRI (Thesis)",
+        p6_desc:"Binary ASD/Control classification on rs-fMRI functional connectivity from ABIDE (1102 subjects, AAL2 atlas, 94 ROIs). Benchmarked at AUC 0.79, exploring MLP and GNN architectures.",
         research_title:"Teaching &amp; Research",
         research_subtitle:"AI instructor, academic researcher, and public speaker at the intersection of cognitive science and machine learning.",
         teach_label:"// Teaching",
@@ -838,17 +899,25 @@
       },
       es: {
         nav_projects:"Proyectos", nav_research:"Investigación", nav_about:"Sobre mí", nav_contact:"Contacto",
-        badge_neuro:"Neurocientífico", badge_mental:"Salud mental + IA",
-        hero_desc:"Trabajo en proyectos de IA aplicada enfocados en análisis de datos e implementación real. Cursando la Maestría en IA en la UdeSA. Basado en Buenos Aires.",
+        badge_role:"AI Engineer Jr.", badge_neuro:"Data Scientist", badge_mental:"Neurocientífico",
+        hero_desc:"Psicólogo y Científico de Datos en la intersección de neurociencia cognitiva y aprendizaje profundo. Coordinador Académico en Humai, investigador en Universidad Favaloro y estudiante de la Maestría en IA en UdeSA.",
         hero_cta_projects:"Ver proyectos →", hero_cta_contact:"Contacto", hero_cta_cv:"Ver investigación",
         hero_location:"abierto a remoto",
         projects_title:"Proyectos destacados", projects_all:"todos los repos →",
         p0_desc:"Clustering (KMeans) + clasificación supervisada (Regresión Logística) sobre features de neuroimagen para clasificación del espectro autista. Desarrollado en un workshop internacional BrainHack.",
-        p1_desc:"LSTM bidireccional que predice la dirección diaria del MERVAL usando señales de sentimiento de Reddit. Tuneado con Optuna, validado con walk-forward CV.",
+        p1_tags:"Data Science · Modelado Conductual · Telemetría",
+        p1_title:"Atenti (NeuroFlow)",
+        p1_desc:"Proyecto de investigación que utiliza logs de smartphones y telemetría para agrupar perfiles de riesgo de adicción digital y trazar patrones de comportamiento.",
         p2_desc:"Pipeline end-to-end Bronze→Silver→Gold con 29 tests automáticos de data quality. dbt sobre DuckDB para modelado, Airflow para orquestación.",
         p3_desc:"Pipeline editorial LLM-powered que genera y publica posts diarios en Telegram sobre la Selección Argentina. Sistema RAG anti-repetición propio, corre vía GitHub Actions.",
         p4b_desc:"App gamificada para aprender filosofía estilo Duolingo. Islas temáticas, misiones con teoría interactiva y quizzes, XP y rachas diarias. Next.js 16 + Supabase + Tailwind v4.",
         p4_desc:"API REST de pagos con state machine explícita, tests unitarios + integración, CI con GitHub Actions y auto-deploy a Render.",
+        p5_tags:"DL · Finanzas · NLP",
+        p5_title:"Predicción de Precios de Activos (MSc)",
+        p5_desc:"Modelos LSTM, GRU y Transformers para predicción de activos financieros argentinos, combinando series temporales con análisis de sentimiento de Reddit y medios usando BETO.",
+        p6_tags:"Neurociencias · Deep Learning · fMRI",
+        p6_title:"Detección de TEA con fMRI (Tesis)",
+        p6_desc:"Clasificación binaria TEA/Control sobre conectividad funcional rs-fMRI del dataset ABIDE (1102 sujetos, atlas AAL2, 94 ROIs). Benchmark AUC: 0.79, explorando MLP y GNN.",
         research_title:"Docencia e Investigación",
         research_subtitle:"Docente de IA, investigador académico y orador en la intersección entre ciencias cognitivas y machine learning.",
         teach_label:"// Docencia",
@@ -910,6 +979,52 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── Synaptic signal animation ─────────────────────────────────────────
+    (function initSynapticSignal() {
+      const nodes = [
+        {x:32,y:86},{x:66,y:54},{x:94,y:50},{x:120,y:58},{x:156,y:78},
+        {x:162,y:102},{x:152,y:122},{x:133,y:136},{x:108,y:146},{x:87,y:130},
+        {x:60,y:125},{x:38,y:112},
+        {x:72,y:82},{x:98,y:80},{x:122,y:85},{x:138,y:94},
+        {x:88,y:109},{x:115,y:106},{x:132,y:119}
+      ];
+      const adj = nodes.map(() => []);
+      [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],[10,11],[11,0],
+       [0,12],[1,12],[1,13],[2,13],[3,14],[3,15],[4,15],[5,15],[5,18],[6,18],
+       [11,12],[12,13],[13,14],[14,15],[11,16],[12,16],[14,17],[15,17],[15,18],[17,18],
+       [9,16],[9,17],[8,17],[8,18],[7,18]
+      ].forEach(([a,b]) => { adj[a].push(b); adj[b].push(a); });
+
+      const svgEl = document.querySelector('#brain-network').closest('svg');
+      const ns = 'http://www.w3.org/2000/svg';
+      const dot = document.createElementNS(ns, 'circle');
+      dot.setAttribute('r', '3.5');
+      dot.setAttribute('fill', '#F4F4F2');
+      dot.setAttribute('opacity', '0');
+      dot.style.filter = 'drop-shadow(0 0 5px rgba(244,244,242,0.9))';
+      document.getElementById('synapse-signal').appendChild(dot);
+
+      let cur = 17, tgt = 0, prog = 0, pause = 0;
+      const speed = 0.016, pauseAt = 10;
+      function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+      function pickNext() {
+        const n = adj[cur]; return n[Math.floor(Math.random()*n.length)];
+      }
+      tgt = pickNext();
+
+      function tick() {
+        if (pause > 0) { pause--; requestAnimationFrame(tick); return; }
+        prog += speed;
+        if (prog >= 1) { prog = 0; cur = tgt; tgt = pickNext(); pause = pauseAt; }
+        const f = nodes[cur], t = nodes[tgt], p = ease(prog);
+        dot.setAttribute('cx', f.x + (t.x - f.x) * p);
+        dot.setAttribute('cy', f.y + (t.y - f.y) * p);
+        dot.setAttribute('opacity', '0.85');
+        requestAnimationFrame(tick);
+      }
+      setTimeout(() => requestAnimationFrame(tick), 2800);
+    })();
   </script>
 </body>
 </html>
