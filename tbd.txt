@@ -1,0 +1,2 @@
+- actualizar el portfolio en ingles en base a lo que modifique en español
+- poner resumen de experiencia y resumen de formacion como una seccion con mas importancia
