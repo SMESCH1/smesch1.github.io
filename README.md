@@ -9,11 +9,6 @@ Soy Mg. en Inteligencia Artificial, Data Scientist y Licenciado en Psicología c
 
 Para más detalles sobre mis proyectos, investigación y experiencia, te invito a visitar mi portfolio interactivo en el enlace superior.
 
-## Tecnologías Utilizadas
-- HTML5 / CSS Vanilla
-- Tailwind CSS 
-- GitHub Pages para el despliegue
-
 ## Contacto
 - **Email:** lic.mesch@gmail.com
 - **LinkedIn:** [/in/sebastian-mesch-henriques](https://www.linkedin.com/in/sebastian-mesch-henriques/)
