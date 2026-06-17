@@ -11,5 +11,5 @@ Para más detalles sobre mis proyectos, investigación y experiencia, te invito 
 
 ## Contacto
 - **Email:** lic.mesch@gmail.com
-- **LinkedIn:** [/in/sebastian-mesch-henriques](https://www.linkedin.com/in/sebastian-mesch-henriques/)
+- **LinkedIn:** [/in/sebastian-mesch-henriques](https://www.linkedin.com/in/sebasti%C3%A1n-mesch-henriques/)
 - **GitHub:** [@SMESCH1](https://github.com/SMESCH1)
