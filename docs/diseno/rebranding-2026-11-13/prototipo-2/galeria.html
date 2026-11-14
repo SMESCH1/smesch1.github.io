@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portada con proyectos y cerebro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --placa:#EDEDEB; --tinta:#111214; --tinta-suave:#4C4F55; --linea:#D2D3D5; --cobalto:#3C6DE4; }
+  body { margin:0; background:var(--placa); color:var(--tinta); font:400 18px/1.55 "Source Sans 3", "Segoe UI", sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:48px 24px 96px; }
+  h1, h2 { font-family:"Piazzolla", Georgia, serif; font-weight:600; line-height:1.1; }
+  h1 { font-size:44px; margin:0 0 24px; }
+  h2 { font-size:32px; margin:56px 0 16px; }
+  a { color:inherit; text-decoration-color:var(--cobalto); text-decoration-thickness:2px; text-underline-offset:4px; }
+  table { border-collapse:collapse; width:100%; font-size:16px; margin:16px 0; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--linea); }
+  th { font-weight:600; color:var(--tinta-suave); }
+  img, video { display:block; max-width:100%; margin:16px 0; border:1px solid var(--linea); border-radius:6px; }
+  p img { display:inline-block; vertical-align:top; max-width:calc(50% - 8px); margin:8px 8px 8px 0; }
+  video { width:100%; background:#000; }
+  code { font-size:.9em; }
+</style>
+</head>
+<body><main>
+<h1>Portada "My projects + cerebro" · prototipo 2 (13/11/2026)</h1>
+<p><strong>Probalo en vivo:</strong> con el servidor de desarrollo andando (<code>npx vite</code> en el repo, rama <code>prototipo-portada</code>), abrí <a href="http://localhost:5173/?portada=proyectos">http://localhost:5173/?portada=proyectos</a>. Abajo hay un selector: estilo del carrusel (mazo, fila, ficha), semilla, registro, resaltador dibujado, celular sin cerebro y tema.</p>
+<p><strong>Mejora a probar:</strong> la semilla. Al pasar el cursor por cualquier nodo se enciende su vecindario (el nodo, sus vecinos a un paso y, más tenues, los de dos pasos), como un mapa de conectividad desde una semilla.</p>
+<h2>Lo que pediste</h2>
+<table>
+<thead>
+<tr>
+<th>Pedido</th>
+<th>Cómo quedó</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carrusel arriba y cerebro abajo</td>
+<td>Sí, en la columna derecha de la portada</td>
+</tr>
+<tr>
+<td>"Mis proyectos" encima del carrusel</td>
+<td>"My <strong>projects</strong>" (el sitio está en inglés), con el subrayado de firma</td>
+</tr>
+<tr>
+<td>Que un texto largo no empuje al cerebro</td>
+<td>El carrusel tiene alto fijo y la bajada se corta a 3 líneas (2 en celular). Medido: el cerebro queda en el mismo lugar con el proyecto más corto y con el más largo</td>
+</tr>
+<tr>
+<td>Cerebro interactivo: tocar nodos muestra proyectos</td>
+<td>Los 9 proyectos tienen su nodo (aro punteado). Clic o toque: el carrusel salta a ese proyecto y una señal cobalto sube por el tronco hasta la región. Con el mouse, el nombre aparece al pasar. También anda con teclado (Tab y Enter)</td>
+</tr>
+<tr>
+<td>En celular, el cerebro después del carrusel o nada</td>
+<td>Después del carrusel y más chico. Con "celular sin cerebro", no aparece</td>
+</tr>
+<tr>
+<td>Dendritas que crecen en forma lineal desde el origen</td>
+<td>Cada rama empieza cuando la anterior llega a su punta, a velocidad constante, desde la esquina hacia los bordes (ver <code>fondo-crecimiento.png</code>)</td>
+</tr>
+<tr>
+<td>En claro, la red de nodos y aristas</td>
+<td>La misma red de PSIA-contenido (<code>red.py</code>), con el mismo crecimiento desde la esquina</td>
+</tr>
+</tbody>
+</table>
+<video src="mazo-oscuro.mp4#t=3" preload="metadata" controls muted playsinline></video>
+
+<video src="mazo-claro.mp4#t=3" preload="metadata" controls muted playsinline></video>
+
+<p><img alt="Crecimiento del fondo: arriba oscuro (dendritas), abajo claro (red); a 0,35 s, 0,7 s y 1,4 s" src="fondo-crecimiento.png" /></p>
+<h2>Variaciones para elegir</h2>
+<p><strong>Estilo del carrusel.</strong>
+- <em>Mazo:</em> las cartas de atrás asoman debajo; se arrastra la de adelante.
+- <em>Fila:</em> la carta siguiente asoma a la derecha; se desliza la fila. Es el gesto más natural en celular.
+- <em>Ficha:</em> una sola ficha fija cuyo contenido se funde. Es la más tranquila.</p>
+<p><img alt="Mazo" src="mazo-oscuro-reposo.png" />
+<img alt="Fila" src="fila-oscuro-reposo.png" />
+<img alt="Ficha, después de tocar el nodo del occipital" src="ficha-oscuro-clic.png" /></p>
+<video src="fila-oscuro.mp4#t=3" preload="metadata" controls muted playsinline></video>
+
+<video src="ficha-oscuro.mp4#t=3" preload="metadata" controls muted playsinline></video>
+
+<p><strong>Semilla (mejora a probar).</strong> Solo con mouse. En el celular, tocar un nodo abre su proyecto.</p>
+<p><img alt="Semilla en oscuro" src="semilla-oscuro.png" />
+<img alt="Semilla en claro" src="semilla-claro.png" /></p>
+<p><strong>Registro.</strong> Una tira tipo EEG debajo del cerebro: cada señal deja un pico y la llegada del proyecto, una marca cobalto. Dice "illustrative, not recorded data", como pide el gusto para los esquemas.</p>
+<p><img alt="Registro" src="registro-oscuro-6s.png" /></p>
+<video src="registro-oscuro.mp4#t=3" preload="metadata" controls muted playsinline></video>
+
+<p><strong>Resaltador del About.</strong> Arriba, el recto (un bloque sol que se extiende al entrar en pantalla, en CSS). Abajo, el dibujado del Highlighter de Magic UI (trazo a mano, irregular). En oscuro, los dos quedan como manda el gusto: la palabra en sol y en negrita, sin bloque.</p>
+<p><img alt="Resaltador recto contra dibujado" src="about-resaltadores.png" /></p>
+<p><strong>Celular.</strong></p>
+<p><img alt="Portada en celular, oscuro y claro" src="celular-portadas.png" />
+<img alt="Después de tocar el nodo de Wernicke" src="celular-oscuro-toque.png" /></p>
+<video src="celular-oscuro.mp4#t=3" preload="metadata" controls muted playsinline></video>
+
+<h2>Mi recomendación</h2>
+<p>Ficha con semilla, sin registro y con el resaltador recto. La ficha es la que menos compite con el cerebro, que ya se mueve; la semilla suma la interacción más ligada a tu trabajo; el registro es lindo pero agrega un tercer foco en la portada. En celular, la fila (por el gesto de deslizar) o directamente sin cerebro.</p>
+<h2>El mapa: revisalo vos</h2>
+<p>Son guiños, no anatomía exacta (la nota lo aclara). Cambiar uno es cambiar una línea de <code>src/prototipo/datos.ts</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Proyecto</th>
+<th>Nodo</th>
+<th>Región</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASD detection via fMRI (thesis)</td>
+<td>hub central</td>
+<td>Whole-brain connectivity</td>
+</tr>
+<tr>
+<td>Ontogenia Artificial</td>
+<td>frontal inferior</td>
+<td>Broca's area · syntax</td>
+</tr>
+<tr>
+<td>ABIDE DANN</td>
+<td>atrás</td>
+<td>Occipital lobe · vision</td>
+</tr>
+<tr>
+<td>Stock price prediction</td>
+<td>frontal</td>
+<td>Prefrontal cortex · decisions</td>
+</tr>
+<tr>
+<td>Medallion pipeline</td>
+<td>temporal</td>
+<td>Temporal lobe · memory</td>
+</tr>
+<tr>
+<td>Autism classification: BrainHack</td>
+<td>parietal</td>
+<td>Default mode network · parietal hub</td>
+</tr>
+<tr>
+<td>InforMessi</td>
+<td>temporal posterior</td>
+<td>Wernicke's area · reading the news</td>
+</tr>
+<tr>
+<td>SocratIA</td>
+<td>polo frontal</td>
+<td>Frontal pole · abstract thought</td>
+</tr>
+<tr>
+<td>FastAPI payments API</td>
+<td>abajo, atrás</td>
+<td>Cerebellum · error correction</td>
+</tr>
+</tbody>
+</table>
+<h2>Chequeos hechos</h2>
+<ul>
+<li>Sin errores en la consola en ninguna variante, en escritorio (1440 px) ni en celular (390 px), y sin desborde horizontal.</li>
+<li>Con "reducir movimiento", a los 0,6 s todo está en su estado final (<code>reducido-oscuro.png</code>).</li>
+<li>Las animaciones siguen la skill <code>animate</code> (Emil Kowalski): curvas ease-out e ease-in-out fuertes, nada desde <code>scale(0)</code>, cambios de interfaz de 300 ms o menos, el efecto del cursor solo con mouse y "reducir movimiento" en todo.</li>
+</ul>
+<h2>Pendiente</h2>
+<ul>
+<li>La cifra que cuenta (0.79) muestra 0.00 si la carta empieza fuera de pantalla. Cuenta cuando se ve, pero conviene decidir si arranca ya en su valor.</li>
+<li>Siguen sin resolver los datos del sitio que te marqué: "Academic Coordinator" contra "Mentor" en Humai, y el enlace de INECO.</li>
+<li>Todo está en la rama <code>prototipo-portada</code>, sin commits. <code>src/main.tsx</code> apunta al prototipo.</li>
+</ul>
+</main></body>
+</html>

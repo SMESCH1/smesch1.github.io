@@ -1,15 +1,32 @@
-# Sebastián Mesch Henriques | Portfolio Personal
+# React + TypeScript + Vite
 
-Este repositorio contiene el código fuente de mi portfolio personal.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-🌐 **Portfolio en vivo:** [https://smesch1.github.io](https://smesch1.github.io/)
+Currently, two official plugins are available:
 
-## Sobre Mí
-Soy Mg. en Inteligencia Artificial, Data Scientist y Licenciado en Psicología con especialización en Neurociencias. Mi trabajo se centra en la intersección entre la neurociencia cognitiva y el Deep Learning, construyendo aplicaciones de IA, arquitecturas de datos y sistemas en producción orientados a la salud mental y el comportamiento.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Para más detalles sobre mis proyectos, investigación y experiencia, te invito a visitar mi portfolio interactivo en el enlace superior.
+## React Compiler
 
-## Contacto
-- **Email:** lic.mesch@gmail.com
-- **LinkedIn:** [/in/sebastian-mesch-henriques](https://www.linkedin.com/in/sebasti%C3%A1n-mesch-henriques/)
-- **GitHub:** [@SMESCH1](https://github.com/SMESCH1)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

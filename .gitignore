@@ -1,18 +1,36 @@
-CV_Sebastian_Mesch.pptx (2).pdf
-LLM_CONTEXT.md
-PSIA-removebg-preview.png
-EDITING.md
-.playwright-mcp/
-hero-screenshot.png
-new-projects.png
-projects-screenshot.png
-projects-section.png
-TBD.md
-PORTFOLIO_IMPROVEMENTS.md
-CV_Sebastian_Mesch_Henriques.pdf
-tbd.txt
-.claude/
-*.pdf
-*.png
-*.md
-!README.md
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Secretos (no hay hoy, pero nunca se versionan)
+.env*
+!.env.example
+
+# Material de diseño pesado: queda en el disco, no en la historia de git.
+# Se versionan las notas, la galería, el código del prototipo y las capturas finales (implementacion/*.png).
+docs/**/*.mp4
+docs/**/*.webm
+docs/diseno/rebranding-2026-11-13/capturas/
+docs/diseno/rebranding-2026-11-13/prototipo/
+docs/diseno/rebranding-2026-11-13/prototipo-2/*.png
