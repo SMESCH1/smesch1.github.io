@@ -1,24 +1,35 @@
-import { Navbar } from './components/layout/Navbar';
-import { Footer } from './components/layout/Footer';
-import { Hero } from './components/sections/Hero';
-import { About } from './components/sections/About';
-import { Experience } from './components/sections/Experience';
-import { Projects } from './components/sections/Projects';
+import { MotionConfig } from 'motion/react';
+import { ProveedorPreferencias, usePreferencias } from './contexto/preferencias';
+import { Nav } from './componentes/Nav';
+import { Portada } from './componentes/Portada';
+import { Contacto, Investigacion, Pie, Proyectos, SobreMi, Trayectoria } from './secciones/Secciones';
 
-function App() {
+function Sitio() {
+  const { t } = usePreferencias();
   return (
     <>
-      <div className="noise-bg"></div>
-      <Navbar />
-      <main className="relative z-10">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
+      <a className="saltar" href="#proyectos">{t.saltar}</a>
+      <Nav />
+      <Portada />
+      <main>
+        <Proyectos />
+        <Investigacion />
+        <SobreMi />
+        <Trayectoria />
+        <Contacto />
       </main>
-      <Footer />
+      <Pie />
     </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    // reducedMotion="user": con movimiento reducido, Motion deja solo la opacidad (skill animate).
+    <MotionConfig reducedMotion="user">
+      <ProveedorPreferencias>
+        <Sitio />
+      </ProveedorPreferencias>
+    </MotionConfig>
+  );
+}

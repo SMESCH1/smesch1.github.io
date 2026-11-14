@@ -1,0 +1,20 @@
+# Dependabot (hardening-seguridad, HS-52): dependencias npm y Actions fijadas por SHA, con cooldown (HS-57).
+version: 2
+updates:
+  - package-ecosystem: "npm" # cambiar a "pip", "docker", etc. según el stack
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+    cooldown: # HS-57: no proponer versiones recién publicadas (las de seguridad no esperan)
+      default-days: 5
+      semver-major-days: 14
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown: # actualiza los SHA fijados (HS-53) recién después de unos días
+      default-days: 7
