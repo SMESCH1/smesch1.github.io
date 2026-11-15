@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { useInView } from 'motion/react';
 import { NumberTicker } from '@/components/ui/number-ticker';
 import { partirResaltado } from '../lib/resaltado';
+import { usePreferencias } from '../contexto/preferencias';
 
 /** Un título con firma (gusto-visual): [antes, palabra clave en cobalto y subrayada, después]. */
 export function Firma({ partes }: { partes: readonly [string, string, string] }) {
@@ -24,9 +25,10 @@ export function ConResaltado({ texto }: { texto: string }) {
 
 /** Una cifra en cobalto que cuenta desde 0 la primera vez que se ve (NumberTicker de Magic UI, adaptado). */
 export function Cifra({ valor, decimales, rotulo }: { valor: number; decimales: number; rotulo: string }) {
+  const { idioma } = usePreferencias();
   return (
     <p className="cifra">
-      <NumberTicker className="num" value={valor} decimalPlaces={decimales} />
+      <NumberTicker className="num" value={valor} decimalPlaces={decimales} idioma={idioma} />
       <span className="lbl">{rotulo}</span>
     </p>
   );

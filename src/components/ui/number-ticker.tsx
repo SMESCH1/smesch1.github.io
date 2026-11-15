@@ -4,6 +4,8 @@ import { useEffect, useRef, type ComponentPropsWithoutRef } from "react"
 import { useInView, useMotionValue, useReducedMotion, useSpring } from "motion/react"
 
 import { cn } from "@/lib/utils"
+import { formatoNumero } from "@/lib/numeros"
+import type { Idioma } from "@/lib/preferencias"
 
 interface NumberTickerProps extends ComponentPropsWithoutRef<"span"> {
   value: number
@@ -11,6 +13,8 @@ interface NumberTickerProps extends ComponentPropsWithoutRef<"span"> {
   direction?: "up" | "down"
   delay?: number
   decimalPlaces?: number
+  /** adaptado: los separadores del idioma (1,225 / 1.225) */
+  idioma?: Idioma
 }
 
 export function NumberTicker({
@@ -20,6 +24,7 @@ export function NumberTicker({
   delay = 0,
   className,
   decimalPlaces = 0,
+  idioma = "en",
   ...props
 }: NumberTickerProps) {
   const ref = useRef<HTMLSpanElement>(null)
@@ -30,8 +35,7 @@ export function NumberTicker({
   })
   const isInView = useInView(ref, { once: true, margin: "0px" })
   const reducir = useReducedMotion() // adaptado: con movimiento reducido, el número final sin contar
-  const formato = (n: number) =>
-    Intl.NumberFormat("en-US", { minimumFractionDigits: decimalPlaces, maximumFractionDigits: decimalPlaces }).format(Number(n.toFixed(decimalPlaces)))
+  const formato = (n: number) => formatoNumero(n, decimalPlaces, idioma)
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout> | null = null
@@ -50,16 +54,16 @@ export function NumberTicker({
     }
   }, [motionValue, isInView, delay, value, direction, startValue, reducir])
 
-  useEffect(
-    () =>
-      springValue.on("change", (latest) => {
-        if (ref.current) {
-          ref.current.textContent = formato(latest)
-        }
-      }),
+  useEffect(() => {
+    // adaptado: al cambiar de idioma, el número que ya contó se vuelve a escribir con sus separadores
+    if (ref.current && !reducir) ref.current.textContent = formato(springValue.get())
+    return springValue.on("change", (latest) => {
+      if (ref.current) {
+        ref.current.textContent = formato(latest)
+      }
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [springValue, decimalPlaces]
-  )
+  }, [springValue, decimalPlaces, idioma, reducir])
 
   return (
     <span

@@ -40,8 +40,13 @@ describe('proyectos', () => {
     for (const n of nodos) expect(NODOS, n).toHaveProperty(n);
     expect(new Set(nodos).size).toBe(nodos.length);
   });
-  test('los enlaces al código son de GitHub', () => {
-    for (const p of PROYECTOS) expect(p.codigo).toMatch(/^https:\/\/github\.com\/SMESCH1\//);
+  test('los enlaces al código son de GitHub (un proyecto sin enlace es de un repo privado)', () => {
+    for (const p of PROYECTOS) if (p.codigo !== undefined) expect(p.codigo).toMatch(/^https:\/\/github\.com\/SMESCH1\//);
+  });
+  test('mi-amigo-el-fit está en el hipotálamo y no enlaza a su repo, que es privado (sería un 404)', () => {
+    const fit = PROYECTOS.find((p) => p.id === 'fit');
+    expect(fit?.nodo).toBe('B2');
+    expect(fit).not.toHaveProperty('codigo');
   });
 });
 

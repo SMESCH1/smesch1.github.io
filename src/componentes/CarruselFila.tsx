@@ -55,11 +55,13 @@ export function CarruselFila({ activo, onIr, pausado, anunciar }: Props) {
               <article key={p.id} className="carta" data-frente={frente} aria-hidden={!frente}
                 aria-roledescription="slide" aria-label={`${i + 1} / ${n}`}>
                 <p className="region-carta">{tx.region}</p>
-                <h3><a href={p.codigo} draggable={false} tabIndex={frente ? 0 : -1}>{tx.titulo}</a></h3>
+                <h3>{p.codigo ? <a href={p.codigo} draggable={false} tabIndex={frente ? 0 : -1}>{tx.titulo}</a> : tx.titulo}</h3>
                 <p className="desc">{tx.desc}</p>
                 <div className="pie-carta">
                   {p.cifra && frente ? <Cifra valor={p.cifra.valor} decimales={p.cifra.decimales} rotulo={tx.cifra!} /> : <span />}
-                  <a className="enlace" href={p.codigo} draggable={false} tabIndex={frente ? 0 : -1}>{t.proyectos.codigo}</a>
+                  {p.codigo
+                    ? <a className="enlace" href={p.codigo} draggable={false} tabIndex={frente ? 0 : -1}>{t.proyectos.codigo}</a>
+                    : <span className="privado">{t.proyectos.privado}</span>}
                 </div>
               </article>
             );
