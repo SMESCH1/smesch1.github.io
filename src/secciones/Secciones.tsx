@@ -66,12 +66,14 @@ export function Proyectos() {
           return (
             <motion.article key={p.id} className={`proyecto${i === 0 ? ' destacado' : ''}`} {...aparecer((i % 2) * 0.06)}>
               <p className="temas">{tx.temas}</p>
-              <h3><a href={p.codigo} target="_blank" rel="noopener noreferrer">{tx.titulo}</a></h3>
+              <h3>{p.codigo ? <a href={p.codigo} target="_blank" rel="noopener noreferrer">{tx.titulo}</a> : tx.titulo}</h3>
               <p className="desc">{tx.desc}</p>
               {p.cifra && <Cifra valor={p.cifra.valor} decimales={p.cifra.decimales} rotulo={tx.cifra!} />}
               <ul className="tech">{p.tech.map((x) => <li key={x}>{x}</li>)}</ul>
               <div className="enlaces-card">
-                <a className="enlace" href={p.codigo} target="_blank" rel="noopener noreferrer">{t.proyectos.codigo}</a>
+                {p.codigo
+                  ? <a className="enlace" href={p.codigo} target="_blank" rel="noopener noreferrer">{t.proyectos.codigo}</a>
+                  : <span className="privado">{t.proyectos.privado}</span>}
                 {p.demo && <a className="enlace" href={p.demo} target="_blank" rel="noopener noreferrer">{t.proyectos.demo}</a>}
               </div>
             </motion.article>

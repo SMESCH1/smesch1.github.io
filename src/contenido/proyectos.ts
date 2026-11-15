@@ -7,10 +7,12 @@ export interface Proyecto {
   id: string;
   nodo: string;
   tech: string[];
-  codigo: string;
+  /** El repo en GitHub. Si falta, el repo es privado: la carta lo dice y no enlaza (sería un 404). */
+  codigo?: string;
   demo?: string;
   /** Una cifra con fuente. 0.79: benchmark histórico de la tesis 2023 (README de ASD-detection).
-   *  29: tests de calidad de datos (README de medallion-pipeline-airflow-dbt). */
+   *  29: tests de calidad de datos (README de medallion-pipeline-airflow-dbt).
+   *  1225: tests de Vitest que pasan en mi-amigo-el-fit (`npx vitest run`, 15/11/2026; crece con cada plan). */
   cifra?: { valor: number; decimales: number };
   textos: Record<Idioma, TextosProyecto>;
 }
@@ -88,6 +90,21 @@ export const PROYECTOS: Proyecto[] = [
       es: { temas: 'LLM · RAG · Automatización', titulo: 'InforMessi',
         desc: 'Pipeline editorial con LLM que escribe y publica posts diarios en Telegram sobre la Selección Argentina, con un RAG anti-repetición. Corre todos los días en GitHub Actions.',
         region: 'Área de Wernicke · leer las noticias' },
+    },
+  },
+  {
+    // Repo privado (SMESCH1/mi-amigo-el-fit): sin enlace al código. Fuente: su README y PROXIMOS-PASOS.md.
+    // La app solo se usa por Tailscale: acá no van nombres de máquinas, rutas ni detalles de la operación.
+    id: 'fit', nodo: 'B2',
+    tech: ['Next.js 16 / PWA', 'SQLite / FTS5', 'Claude', 'Docker / Tailscale'],
+    cifra: { valor: 1225, decimales: 0 },
+    textos: {
+      en: { temas: 'Full-stack · LLM · Nutrition', titulo: 'Mi amigo el fit',
+        desc: 'Meal, water and weight tracker for the iPhone: type "2 empanadas and a coke" and Claude logs it. It matches each food against the ARGENFOODS and USDA tables and reads nutrition labels from a photo. Runs on my homelab.',
+        region: 'Hypothalamus · hunger and energy balance', cifra: 'tests' },
+      es: { temas: 'Full-stack · LLM · Nutrición', titulo: 'Mi amigo el fit',
+        desc: 'Tracker de comidas, agua y peso para el iPhone: escribís "2 empanadas y una coca" y Claude lo carga. Busca cada alimento en las tablas ARGENFOODS y USDA y lee etiquetas nutricionales desde una foto. Corre en mi homelab.',
+        region: 'Hipotálamo · hambre y balance energético', cifra: 'tests' },
     },
   },
   {

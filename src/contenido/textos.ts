@@ -26,7 +26,7 @@ const en = {
     cerebro: 'Brain map of projects. Each marked node opens a project.',
     registro: 'activity · illustrative, not recorded data',
   },
-  proyectos: { titulo: ['Featured ', 'projects', ''] as Titulo, todos: 'All repositories', codigo: 'Code', demo: 'Live demo' },
+  proyectos: { titulo: ['Featured ', 'projects', ''] as Titulo, todos: 'All repositories', codigo: 'Code', demo: 'Live demo', privado: 'Private repo' },
   investigacion: {
     titulo: ['Teaching & ', 'research', ''] as Titulo,
     bajada: 'AI instructor, researcher and speaker on neuroscience, behavioral science and artificial intelligence.',
@@ -80,7 +80,7 @@ const es: Textos = {
     cerebro: 'Mapa cerebral de proyectos. Cada nodo marcado abre un proyecto.',
     registro: 'actividad · ilustrativa, no son datos registrados',
   },
-  proyectos: { titulo: ['', 'Proyectos', ' destacados'], todos: 'Todos los repositorios', codigo: 'Código', demo: 'Demo en vivo' },
+  proyectos: { titulo: ['', 'Proyectos', ' destacados'], todos: 'Todos los repositorios', codigo: 'Código', demo: 'Demo en vivo', privado: 'Repo privado' },
   investigacion: {
     titulo: ['Docencia e ', 'investigación', ''],
     bajada: 'Docente de IA, investigador y orador sobre neurociencias, ciencias del comportamiento e inteligencia artificial.',
